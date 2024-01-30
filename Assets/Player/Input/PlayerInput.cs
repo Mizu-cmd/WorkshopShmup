@@ -24,7 +24,8 @@ public class PlayerInput : MonoBehaviour
     
     public void InputSecondary(InputAction.CallbackContext ctx)
     {
-        _playerShoot.ShootSecondary();
+        if(ctx.performed) _playerShoot.ShootSecondary();
+        if(ctx.canceled) _playerShoot.ReleaseSecondary();
     }
     
     public void InputSpecial(InputAction.CallbackContext ctx)

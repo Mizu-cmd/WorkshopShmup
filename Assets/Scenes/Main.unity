@@ -169,7 +169,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   shootSpeed: 0.325
-  magSize: 20
+  reloadTime: 2
+  magSize: 5
   bulletTrail: {fileID: 8506106604788109068, guid: 3af10c7a1dfbf7048a339a0ca921dd0c,
     type: 3}
 --- !u!1 &330585543
@@ -793,7 +794,19 @@ MonoBehaviour:
     m_ActionId: b53c9e15-3914-40c8-8e9f-44964b76ba9c
     m_ActionName: Player/Primary[/Mouse/leftButton]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2089212826}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
+        m_MethodName: InputSecondary
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 6f7c26b1-7acf-4a34-9995-09628318f6aa
     m_ActionName: Player/Secondary[/Mouse/rightButton]
   - m_PersistentCalls:
