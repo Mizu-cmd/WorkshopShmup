@@ -8,6 +8,15 @@ public class PrimaryWeapon : Weapon
     [SerializeField] private TrailRenderer bulletTrail;
     public override void Shoot()
     {
+        if (IsReloading) return;
+        
+        if (CurrentAmmo <= 0)
+        {
+            IsReloading = true;
+            StartCoroutine(Reload());
+            return;
+        }
+        
         if (!(Time.time > _lastShot + shootSpeed)) return;
         
         TrailRenderer trailRenderer = Instantiate(bulletTrail, transform.position, Quaternion.identity);
@@ -18,6 +27,7 @@ public class PrimaryWeapon : Weapon
         else 
             StartCoroutine(SpawnTrail(trailRenderer, transform.forward * 100, false));
         _lastShot = Time.time;
+        CurrentAmmo--;
     }
     
     IEnumerator SpawnTrail(TrailRenderer trail, Vector3 hitPoint, bool madeImpact)
