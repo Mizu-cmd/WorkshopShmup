@@ -49,7 +49,11 @@ public class PrimaryWeapon : Weapon
 
         if (madeImpact)
         {
-            print("hit");
+            var enemy = _hit.transform.gameObject.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.Damage(damage);
+            }
         }
         Destroy(trail.gameObject, trail.time);
     }
