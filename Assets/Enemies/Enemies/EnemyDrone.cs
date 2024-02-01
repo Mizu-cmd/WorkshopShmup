@@ -16,7 +16,6 @@ public class EnemyDrone : Enemy
     
     public override void Spawn()
     {
-        
     }
 
     public override void Start()
@@ -27,7 +26,8 @@ public class EnemyDrone : Enemy
 
     public override void Destroy()
     {
-        print("destoyed");
+        base.Destroy();
+        print("destroyed");
     }
 
     private void Update()

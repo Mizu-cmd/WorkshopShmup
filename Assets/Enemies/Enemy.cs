@@ -7,8 +7,11 @@ public abstract class Enemy : MonoBehaviour
 {
     public CharacterController EnemyController { get; private set; }
     public Transform playerTransform { get; private set; }
-
+    
     [SerializeField] private float health;
+    
+    [field: SerializeField, Min(0)]
+    public float Score { get; private set; }
 
     public float Health
     {
@@ -39,5 +42,9 @@ public abstract class Enemy : MonoBehaviour
     {
         Health -= damage;
     }
-    public abstract void Destroy();
+
+    public virtual void Destroy()
+    {
+        PlayerScore.Instance.AddScore(Score);
+    }
 }
