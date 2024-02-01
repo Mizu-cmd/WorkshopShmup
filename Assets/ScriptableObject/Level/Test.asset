@@ -27,8 +27,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 2
-      outSlope: 2
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -64,6 +64,6 @@ MonoBehaviour:
   - gridSize: {x: 5, y: 3}
     cellSize: {x: 64, y: 16}
     cells:
-    - row: 0100000001000000010000000100000001000000
+    - row: 0000000003000000010000000100000001000000
     - row: 0000000000000000000000000000000000000000
     - row: 0000000001000000010000000000000000000000

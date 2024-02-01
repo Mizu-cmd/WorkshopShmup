@@ -16,6 +16,7 @@ public class EnemyDrone : Enemy
     
     public override void Spawn()
     {
+        
     }
 
     public override void Start()

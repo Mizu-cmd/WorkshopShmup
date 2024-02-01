@@ -16,7 +16,7 @@ public class PlayerScore : MonoBehaviour
     public float Score
     {
         get { return score; }
-        set
+        set 
         {
             //code interface
             score = value;
@@ -34,7 +34,5 @@ public class PlayerScore : MonoBehaviour
     {
         if (_comboTimer > 0)
             _comboTimer -= Time.deltaTime;
-        
-        print(_comboTimer);
     }
 }
