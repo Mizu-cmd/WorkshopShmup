@@ -30,7 +30,7 @@ public class MainMenu : MonoBehaviour
         {
             paperCam.Priority = 2;
             Destroy(text.gameObject);
-            gameObject.SetActive(false);
+            Destroy(this);
         }
         if (_activateText) text.alpha = Mathf.PingPong(Time.time, 1);
     }

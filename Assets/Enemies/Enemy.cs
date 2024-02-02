@@ -24,7 +24,7 @@ public abstract class Enemy : MonoBehaviour
                 Destroy();
                 return;
             }
-            Health = value;
+            health = value;
         }
     }
     [field: SerializeField] public float Speed { get; set; }

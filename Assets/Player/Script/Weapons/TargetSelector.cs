@@ -25,7 +25,7 @@ public class TargetSelector : MonoBehaviour
         {
             var enemy = hit.transform.GetComponent<Enemy>();
             if (enemy == null) return;
-            
+
             _weapon.targetTransform = enemy.transform;
         }
 

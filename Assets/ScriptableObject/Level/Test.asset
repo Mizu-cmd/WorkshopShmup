@@ -42,18 +42,18 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0
@@ -64,6 +64,6 @@ MonoBehaviour:
   - gridSize: {x: 5, y: 3}
     cellSize: {x: 64, y: 16}
     cells:
-    - row: 0000000003000000010000000100000001000000
+    - row: 0100000001000000030000000400000000000000
     - row: 0000000000000000000000000000000000000000
     - row: 0000000001000000010000000000000000000000
