@@ -1,4 +1,5 @@
 using System.Collections;
+using Cinemachine;
 using UnityEngine;
 
 public class EnemyTank : Enemy
@@ -7,8 +8,11 @@ public class EnemyTank : Enemy
     [SerializeField] private float reachDistance, minShotDelay, maxShotDelay;
     [SerializeField] private float rotationDelay = 2f;
     private Vector3 _motion, _currentVelocity;
-    [SerializeField] private GameObject projectile, projectilSpawn;
+    [SerializeField] private GameObject projectile, turretBone;
     private Animator _animator;
+    private CinemachineImpulseSource _impulseSource;
+    private AudioSource _audioSource;
+    private ParticleSystem _muzzleFlash;
     
     public override void Spawn()
     {
@@ -19,29 +23,41 @@ public class EnemyTank : Enemy
     {
         base.Start();
         _animator = GetComponent<Animator>();
+        _impulseSource = GetComponent<CinemachineImpulseSource>();
+        _audioSource = GetComponent<AudioSource>();
+        _muzzleFlash = GetComponentInChildren<ParticleSystem>();
         StartCoroutine(Shoot());
     }
 
     private void Update()
     {
-        var distance = Vector3.Distance(transform.position, playerTransform.position);
-        var rotation = Quaternion.LookRotation(playerTransform.position - transform.position);
-        transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * rotationDelay);
+        var playerPosition = playerTransform.position;
+        var mechPosition = transform.position;
+        var distance = Vector3.Distance(mechPosition, playerPosition);
+        var targetPostition = new Vector3( playerPosition.x, mechPosition.y, playerPosition.z ) ;
+        
+        turretBone.transform.LookAt(playerPosition);
+        
         if (distance >= reachDistance)
         {
-            transform.position = Vector3.Lerp(transform.position, playerTransform.position, Time.deltaTime * Speed);
-        }
- 
+            playerPosition.y = mechPosition.y;
+            transform.position = Vector3.Lerp(mechPosition, playerPosition,Time.deltaTime * Speed);
+            var rotation = Quaternion.LookRotation(playerTransform.position - transform.position);
+            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * rotationDelay);
+            
+            _animator.SetBool("Idle", false);
+        } else _animator.SetBool("Idle", true);
     }
 
     IEnumerator Shoot()
     {
         yield return new WaitForSeconds(Random.Range(minShotDelay, maxShotDelay));
-        var position = projectilSpawn.transform.position;
-        _animator.Play("Shoot", 0, 0f);
+        _animator.Play("Shoot", 1, 0f);
+        _impulseSource.GenerateImpulse(0.1f);
+        _audioSource.Play();
+        _muzzleFlash.Play();
         
-        var go = Instantiate(projectile, position, Quaternion.identity);
-        go.transform.up = playerTransform.position - position;
+        var go = Instantiate(projectile, BulletSpawn.transform.position, Quaternion.identity);
         StartCoroutine(Shoot());
     }
 
