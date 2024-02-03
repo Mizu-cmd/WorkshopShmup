@@ -1201,13 +1201,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  <Score>k__BackingField: 0
+  rotationDelay: 2
   <Speed>k__BackingField: 0.04
+  <Score>k__BackingField: 0
   <BulletSpawn>k__BackingField: {fileID: 673283760}
   reachDistance: 15
   minShotDelay: 1
   maxShotDelay: 5
-  rotationDelay: 2
   projectile: {fileID: 4674979513930429102, guid: 16ffe0607b1ccaa4d82991f0892fcb55,
     type: 3}
   turretBone: {fileID: 2021113683}
@@ -7622,6 +7622,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1040591560}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 244e271feab7dfb42be754024033b496,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1040591563}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 244e271feab7dfb42be754024033b496,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1040591562}
   m_SourcePrefab: {fileID: 100100000, guid: 244e271feab7dfb42be754024033b496, type: 3}
 --- !u!1 &980930400
 GameObject:
@@ -7806,7 +7814,7 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 989040080}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: 0a054bd2d43604145946a2faa843b21e, type: 3}
+  m_Asset: {fileID: 0}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
@@ -7878,6 +7886,49 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1040591562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040591559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2e4abf27c831c44d825cb653adebf3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  rotationDelay: 2
+  <Speed>k__BackingField: 2
+  <Score>k__BackingField: 0
+  <BulletSpawn>k__BackingField: {fileID: 0}
+--- !u!143 &1040591563
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040591559}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1070194717
 GameObject:
   m_ObjectHideFlags: 0
@@ -8268,11 +8319,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  <Score>k__BackingField: 10
+  rotationDelay: 2
   <Speed>k__BackingField: 2
+  <Score>k__BackingField: 10
   <BulletSpawn>k__BackingField: {fileID: 1808877190}
   moveLenght: 4
-  rotationDelay: 2
   minShootDelay: 1
   maxShootDelay: 4
   bulletTrail: {fileID: 8506106604788109068, guid: 3af10c7a1dfbf7048a339a0ca921dd0c,

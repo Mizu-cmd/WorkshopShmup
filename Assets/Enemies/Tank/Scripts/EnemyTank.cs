@@ -6,7 +6,6 @@ public class EnemyTank : Enemy
 {
 
     [SerializeField] private float reachDistance, minShotDelay, maxShotDelay;
-    [SerializeField] private float rotationDelay = 2f;
     private Vector3 _motion, _currentVelocity;
     [SerializeField] private GameObject projectile, turretBone;
     private Animator _animator;
@@ -34,7 +33,6 @@ public class EnemyTank : Enemy
         var playerPosition = playerTransform.position;
         var mechPosition = transform.position;
         var distance = Vector3.Distance(mechPosition, playerPosition);
-        var targetPostition = new Vector3( playerPosition.x, mechPosition.y, playerPosition.z ) ;
         
         turretBone.transform.LookAt(playerPosition);
         
@@ -42,8 +40,7 @@ public class EnemyTank : Enemy
         {
             playerPosition.y = mechPosition.y;
             transform.position = Vector3.Lerp(mechPosition, playerPosition,Time.deltaTime * Speed);
-            var rotation = Quaternion.LookRotation(playerTransform.position - transform.position);
-            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * rotationDelay);
+            RotateTowardPlayer();
             
             _animator.SetBool("Idle", false);
         } else _animator.SetBool("Idle", true);
@@ -59,10 +56,5 @@ public class EnemyTank : Enemy
         
         var go = Instantiate(projectile, BulletSpawn.transform.position, Quaternion.identity);
         StartCoroutine(Shoot());
-    }
-
-    public override void Destroy()
-    {
-        
     }
 }

@@ -6,7 +6,6 @@ public class EnemyDrone : Enemy
 {
 
     [SerializeField] private float moveLenght = 5f;
-    [SerializeField] private float rotationDelay = 2f;
     [SerializeField] private float minShootDelay, maxShootDelay;
 
     [SerializeField] private TrailRenderer bulletTrail;
@@ -36,9 +35,6 @@ public class EnemyDrone : Enemy
         var motion = Vector3.zero;
         motion.z = moveLenght/2 - Mathf.PingPong(Time.time, moveLenght);
         EnemyController.Move(motion * (Speed * Time.deltaTime));
-
-        var rotation = Quaternion.LookRotation(playerTransform.position - transform.position);
-        transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * rotationDelay);
     }
 
     IEnumerator ShootDelay()
