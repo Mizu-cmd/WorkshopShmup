@@ -27,9 +27,4 @@ public class SecondaryWeapon : Weapon
         
         _lastShot = Time.time;
     }
-
-    public void HandleImpact(Enemy enemy)
-    {
-        enemy.Damage(damage);
-    }
 }

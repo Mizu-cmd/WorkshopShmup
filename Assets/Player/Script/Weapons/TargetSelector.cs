@@ -23,10 +23,9 @@ public class TargetSelector : MonoBehaviour
         Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit))
         {
-            var enemy = hit.transform.GetComponent<Enemy>();
-            if (enemy == null) return;
-
-            _weapon.targetTransform = enemy.transform;
+            Enemy enemy;
+            if (hit.transform.gameObject.TryGetComponent(out enemy))
+                _weapon.targetTransform = enemy.transform;
         }
 
         if (_weapon.targetTransform != null)

@@ -44,7 +44,7 @@ public class SecondaryWeaponProjectile : MonoBehaviour
         if (fracComplete >= 1)
         {
             var enemy = targetTransform.GetComponent<Enemy>();
-            SecondaryWeapon.HandleImpact(enemy);
+            SecondaryWeapon.HandleImpact(transform.position, -transform.right, enemy);
             Destroy(gameObject);
         }
     }

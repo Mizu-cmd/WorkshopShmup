@@ -8,6 +8,7 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField] protected float damage, shootSpeed, reloadTime;
     [SerializeField] protected short magSize;
     private short _currentAmmo;
+    [SerializeField] private ParticleSystem impactSystem;
     protected short CurrentAmmo
     {
         get { return _currentAmmo; }
@@ -25,5 +26,16 @@ public abstract class Weapon : MonoBehaviour
         yield return new WaitForSeconds(reloadTime);
         IsReloading = false;
         CurrentAmmo = magSize;
+    }
+
+    public virtual void HandleImpact(Vector3 impactPoint, Vector3 impactNormal)
+    {
+        var impact = Instantiate(impactSystem, impactPoint, Quaternion.Euler(impactNormal));
+    }
+    
+    public virtual void HandleImpact(Vector3 impactPoint, Vector3 impactNormal, Enemy enemy)
+    {
+        enemy.Damage(damage);
+        var impact = Instantiate(impactSystem, impactPoint, Quaternion.Euler(impactNormal));
     }
 }

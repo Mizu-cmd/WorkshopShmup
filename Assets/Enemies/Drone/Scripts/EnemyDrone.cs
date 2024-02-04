@@ -32,6 +32,7 @@ public class EnemyDrone : Enemy
 
     private void Update()
     {
+        RotateTowardPlayer();
         var motion = Vector3.zero;
         motion.z = moveLenght/2 - Mathf.PingPong(Time.time, moveLenght);
         EnemyController.Move(motion * (Speed * Time.deltaTime));

@@ -21,7 +21,7 @@ public class Molotov : MonoBehaviour
     {
         if (!other.gameObject.CompareTag("Floor")) return;
         
-        _cinemachineImpulseSource.GenerateImpulse(0.2f);
+        _cinemachineImpulseSource.GenerateImpulse(0.1f);
         Instantiate(molotovFire, transform.position, molotovFire.transform.rotation);
         for (int i = 0; i < Random.Range(minFireSize, maxFireSize); i++)
         {

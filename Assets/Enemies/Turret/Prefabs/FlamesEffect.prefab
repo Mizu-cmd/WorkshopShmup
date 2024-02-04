@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2572203722820238904}
   - component: {fileID: 7092827685724275897}
   - component: {fileID: 2231044954538241067}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: NaN, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 1.5e-43, z: 1.6734e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 978769961980029901}
   - component: {fileID: 325459266938582180}
   - component: {fileID: 1196177519057612130}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Embers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4961,7 +4961,7 @@ GameObject:
   - component: {fileID: 1947567072786791735}
   - component: {fileID: 3432593021338761286}
   - component: {fileID: 3421536383203511519}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: FlamesEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}

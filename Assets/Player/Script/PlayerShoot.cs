@@ -4,7 +4,9 @@ using UnityEngine.VFX;
 
 public class PlayerShoot : MonoBehaviour
 {
-    private Weapon _primary, _secondary, _special;
+    private PrimaryWeapon _primary;
+    private SecondaryWeapon _secondary;
+    private Weapon _special;
     private bool _shootSecondary;
     private VisualEffect _casingEffect;
     private void Start()
@@ -29,8 +31,11 @@ public class PlayerShoot : MonoBehaviour
 
     public void ShootSecondary()
     {
-        _shootSecondary = true;
-        _casingEffect.Play();
+        if (_secondary.targetTransform != null)
+        {
+            _shootSecondary = true;
+            _casingEffect.Play();
+        }
     }
 
     public void ReleaseSecondary()
