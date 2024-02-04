@@ -2,7 +2,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController)), DisallowMultipleComponent]
+[DisallowMultipleComponent]
 public abstract class Enemy : MonoBehaviour
 {
     public CharacterController EnemyController { get; private set; }
