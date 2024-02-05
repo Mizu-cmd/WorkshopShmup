@@ -6,11 +6,11 @@ public class EnemyTank : Enemy
 {
 
     [SerializeField] private float reachDistance, minShotDelay, maxShotDelay;
-    [SerializeField] private GameObject projectile, turretBone;
+    [SerializeField] private Transform turretBone;
     [SerializeField] private AudioClip shootClip;
+    [SerializeField] private TankProjectile projectile;
     private Vector3 _motion, _currentVelocity;
     private Animator _animator;
-    private CinemachineImpulseSource _impulseSource;
     private ParticleSystem _muzzleFlash;
     
     public override void Spawn()
@@ -22,18 +22,17 @@ public class EnemyTank : Enemy
     {
         base.Start();
         _animator = GetComponent<Animator>();
-        _impulseSource = GetComponent<CinemachineImpulseSource>();
         _muzzleFlash = GetComponentInChildren<ParticleSystem>();
         StartCoroutine(Shoot());
     }
 
     private void Update()
     {
-        var playerPosition = playerTransform.position;
+        var playerPosition = PlayerTransform.position;
         var mechPosition = transform.position;
         var distance = Vector3.Distance(mechPosition, playerPosition);
         
-        turretBone.transform.LookAt(playerPosition);
+        turretBone.LookAt(playerPosition);
         
         if (distance >= reachDistance)
         {
@@ -49,11 +48,17 @@ public class EnemyTank : Enemy
     {
         yield return new WaitForSeconds(Random.Range(minShotDelay, maxShotDelay));
         _animator.Play("Shoot", 1, 0f);
-        _impulseSource.GenerateImpulse(0.2f);
-        AudioSource.PlayClipAtPoint(shootClip ,transform.position, 0.1f);
+        CinemachineImpulseSource.GenerateImpulse(0.2f);
+        AudioSource.PlayClipAtPoint(shootClip ,transform.position, 0.5f);
         _muzzleFlash.Play();
         
         var go = Instantiate(projectile, BulletSpawn.transform.position, Quaternion.identity);
+        go.Tank = this;
         StartCoroutine(Shoot());
+    }
+
+    public void ProcessProjectileImpact()
+    {
+        DamagePlayer(damage);
     }
 }

@@ -1,7 +1,4 @@
-using System;
 using Cinemachine;
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.VFX;
 
@@ -9,19 +6,18 @@ using UnityEngine.VFX;
 public abstract class Enemy : MonoBehaviour
 {
     public CharacterController EnemyController { get; private set; }
-    public Transform playerTransform { get; private set; }
-    [SerializeField] private float health, rotationDelay;
+    public Transform PlayerTransform { get; private set; }
+    [SerializeField] protected float health, rotationDelay, damage;
     [SerializeField] private VisualEffect explosionVFX;
-    private CinemachineImpulseSource _cinemachineImpulseSource;
+    protected CinemachineImpulseSource CinemachineImpulseSource;
     [field: SerializeField] public float Speed { get; set; }
     [field: SerializeField, Min(0)]
     public float Score { get; private set; }
     public float Health
     {
-        get { return health; }
+        get => health;
         set
         {
-            //update health bar
             if (value <= 0)
             {
                 Destroy();
@@ -34,8 +30,8 @@ public abstract class Enemy : MonoBehaviour
     public virtual void Start()
     {
         EnemyController = GetComponent<CharacterController>();
-        _cinemachineImpulseSource = GetComponent<CinemachineImpulseSource>();
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        CinemachineImpulseSource = GetComponent<CinemachineImpulseSource>();
+        PlayerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     public abstract void Spawn();
@@ -52,13 +48,18 @@ public abstract class Enemy : MonoBehaviour
         var transform = explosionVFX.transform;
         var explosion = Instantiate(explosionVFX, transform.position, transform.rotation);
         explosion.gameObject.SetActive(true);
-        _cinemachineImpulseSource.GenerateImpulse(0.1f);
+        CinemachineImpulseSource.GenerateImpulse(0.1f);
         Destroy(gameObject);
     }
 
     public void RotateTowardPlayer()
     {
-        var rotation = Quaternion.LookRotation(playerTransform.position - transform.position);
+        var rotation = Quaternion.LookRotation(PlayerTransform.position - transform.position);
         transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * rotationDelay);
+    }
+
+    public void DamagePlayer(float playerDamage)
+    {
+        PlayerHealth.Instance.HealthPoint -= playerDamage;
     }
 }

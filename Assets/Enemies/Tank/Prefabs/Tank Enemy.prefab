@@ -5702,12 +5702,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7514033868172908310}
   m_SourcePrefab: {fileID: 100100000, guid: 4f2c16bfeca4e7e4f8ec111d4ee1c91b, type: 3}
---- !u!1 &673977797514500158 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -7556314483625091575, guid: 4f2c16bfeca4e7e4f8ec111d4ee1c91b,
-    type: 3}
-  m_PrefabInstance: {fileID: 2195759077306992183}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1349266718965644134 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f2c16bfeca4e7e4f8ec111d4ee1c91b,
@@ -5775,6 +5769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   rotationDelay: 2
+  damage: 5
   explosionVFX: {fileID: 2762400024047581480}
   <Speed>k__BackingField: 0.04
   <Score>k__BackingField: 0
@@ -5782,10 +5777,10 @@ MonoBehaviour:
   reachDistance: 15
   minShotDelay: 1
   maxShotDelay: 5
-  projectile: {fileID: 4674979513930429102, guid: 16ffe0607b1ccaa4d82991f0892fcb55,
-    type: 3}
-  turretBone: {fileID: 673977797514500158}
+  turretBone: {fileID: 2217069734793699571}
   shootClip: {fileID: 8300000, guid: d02a4fabe7224d54a822913ab12ebcc7, type: 3}
+  projectile: {fileID: 2444355090401838800, guid: 16ffe0607b1ccaa4d82991f0892fcb55,
+    type: 3}
 --- !u!114 &7514033868172908310
 MonoBehaviour:
   m_ObjectHideFlags: 0

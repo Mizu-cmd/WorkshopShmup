@@ -4,6 +4,7 @@ using UnityEngine;
 public class TankProjectile : MonoBehaviour
 {
     [SerializeField] private float speed = 2f;
+    public EnemyTank Tank { get; set; }
 
     private void Start()
     {
@@ -19,6 +20,6 @@ public class TankProjectile : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
-            print("touched by tank");
+            Tank.ProcessProjectileImpact();
     }
 }
