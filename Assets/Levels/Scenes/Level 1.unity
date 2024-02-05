@@ -1063,7 +1063,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: -21.03
   far clip plane: 1000
   field of view: 60
   orthographic: 1
@@ -2562,7 +2562,7 @@ PrefabInstance:
     - target: {fileID: 655211093111903620, guid: 028a2cb3e71cec54f82956a771c12f49,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -50
+      value: -23.73
       objectReference: {fileID: 0}
     - target: {fileID: 655211093111903620, guid: 028a2cb3e71cec54f82956a771c12f49,
         type: 3}
@@ -2577,22 +2577,22 @@ PrefabInstance:
     - target: {fileID: 655211093111903620, guid: 028a2cb3e71cec54f82956a771c12f49,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 655211093111903620, guid: 028a2cb3e71cec54f82956a771c12f49,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 655211093111903620, guid: 028a2cb3e71cec54f82956a771c12f49,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 655211093111903620, guid: 028a2cb3e71cec54f82956a771c12f49,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 655211093111903620, guid: 028a2cb3e71cec54f82956a771c12f49,
         type: 3}
@@ -2602,7 +2602,7 @@ PrefabInstance:
     - target: {fileID: 655211093111903620, guid: 028a2cb3e71cec54f82956a771c12f49,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 655211093111903620, guid: 028a2cb3e71cec54f82956a771c12f49,
         type: 3}
@@ -2617,7 +2617,7 @@ PrefabInstance:
     - target: {fileID: 2359491032086939895, guid: 028a2cb3e71cec54f82956a771c12f49,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4845,7 +4845,7 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 9
-    NearClipPlane: 0.3
+    NearClipPlane: -21.03
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 1

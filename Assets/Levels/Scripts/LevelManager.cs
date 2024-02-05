@@ -44,7 +44,7 @@ public class LevelManager : MonoBehaviour
                 if (position != null && enemy != null)
                 {
                     _enemyCount++;
-                    var go = Instantiate(enemy, position, enemy.transform.rotation);
+                    var go = Instantiate(enemy, position + enemy.transform.position, enemy.transform.rotation);
                     go.Health *= _Level.HPMultiplicator.Evaluate((float) currentWave / 10);
                 }
             }

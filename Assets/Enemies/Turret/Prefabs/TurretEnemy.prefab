@@ -5192,7 +5192,7 @@ Transform:
   m_GameObject: {fileID: 4253220906113557617}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -30, y: 1, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5216,13 +5216,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   rotationDelay: 0
+  damage: 0
   explosionVFX: {fileID: 6366886895695316527}
   <Speed>k__BackingField: 0
   <Score>k__BackingField: 0
   <BulletSpawn>k__BackingField: {fileID: 1937136251098824806}
   molotov: {fileID: 7946799021898552459, guid: fe13528608c10924487e28e08aa879bd, type: 3}
-  minProjectileForce: 400
-  maxProjectileForce: 800
+  minProjectileForce: 200
+  maxProjectileForce: 300
 --- !u!65 &4713375106814966898
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5242,8 +5243,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3, y: 3, z: 3}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 3.8805509, y: 4.251669, z: 3}
+  m_Center: {x: 0.0048851967, y: 1.625834, z: 1.3911682e-17}
 --- !u!114 &4969547576081152828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5457,7 +5458,7 @@ PrefabInstance:
     - target: {fileID: 5893441192592696306, guid: e13d5f69fe4c5d346a2015b35663f5c7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 5893441192592696306, guid: e13d5f69fe4c5d346a2015b35663f5c7,
         type: 3}
