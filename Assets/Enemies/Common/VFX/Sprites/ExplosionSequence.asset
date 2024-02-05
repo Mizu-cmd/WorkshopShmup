@@ -12,13 +12,114 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 546069fd762786f4da89225e1989d105, type: 3}
   m_Name: ExplosionSequence
   m_EditorClassIdentifier: 
-  inputFrameGUIDs: []
-  processorInfos: []
+  inputFrameGUIDs:
+  - 7459af49e053c3d4b833fca5eb8fcfd7
+  - 39753aed7e99d8f4aa1f197109016dd6
+  - 19c23bbf035eccc4a917c51caeb200e0
+  - a7034691b34822c418b9b7800b09e28c
+  - fe5a63749b60e194da2e446b53766610
+  - c2a1ee4ba0ee5bb4b806cc85b60ebb26
+  - 2817bf30e75ea1849b4761043d209cf5
+  - 94c45db7cfa665d43a43ca00332ec566
+  - 843ca9d5757dfb346905d17889c735c3
+  - 76a934f1eb811144da3770188383b09a
+  - 605bee740e603e249883f141881a5afa
+  - 31d303bb5a7311a44bf40993b12f6f68
+  - a6164a4b0d192e542ac8041e258b1c57
+  - fe2d5597a13b6f84f98cc694c0514779
+  - a59f4028f5b6de347aedbb69638ec4d2
+  - d6b6b51d2bb9c3e41a9988851526792b
+  - 1dc594fdedd2c954eabaa53bb882592d
+  - fbcb19ea73c49e84baf44a1840e81d6a
+  - b8c2a7bd45892b1449580005948b0f63
+  - 44590c94a78cba741afaf453c533c37d
+  - 3410ac7abfe356643aef3a5c234c2869
+  - 0a0589b193c3fe54db4bbdad63374d6b
+  - aef42f6a6d6e0114b9ca5bbd61d5e691
+  - eca5c75f1f25d1646bcb2b7634782e7d
+  - c31d5d71c09f48346994956eda8bfa72
+  - 308038295454eae4eb0a584cbd9cef6a
+  - ab9ba0fa39d00ae47a41ab374ed09d6d
+  - 693489f92c874564db39949b53e69ddb
+  - af3e479d87865ab49844a549c5e9e29b
+  - c746bf4fa14707548861e3ab8ba0f11a
+  - 81841a3999047c64595cbb5e18bbe128
+  - d7fe6f4eb9325e34fbefe66f26731702
+  - ad48ca5ca1e2bc04ebf2a4af32595a50
+  - cd337188ce309bd4e86f3947ac733525
+  - 2371e9cf43f8f6d48851df261624fabb
+  - 7644cde106f0e764e92e33abadf5acc7
+  - 26bdbcd109c94dd4381140aaa1fb2b4b
+  - a0f5615645f1b0a44827f059fa94046a
+  - 6b93ca25abcde0b4bb05e05f3b0582e2
+  - 639ed190361d2454987f9f860ec878c5
+  - d75d0ab01b1813643a9cb570bcac5573
+  - 86c8dfb3f096d364ea222e9cb1583a5e
+  - e805cd5c649946643a2fe2acac8de5f5
+  - 6eb5c22a1c0a29248bb1ad2074e2e912
+  - 204e4e964e69fe54283c93f372688f67
+  - 604702572b0386c409e520a4c627e4d4
+  - ccf9566cea6b33d409fefc3d9437ddb2
+  - c753c4752e722e14292193764e0677cf
+  - 895096a5424846e439997d4fb588af0d
+  - aeff605201db10c4389754e7b91dd03b
+  - 957a42ede8932b0469be3e10101cb922
+  - 7bb4c470beeabbc41863e4b6010ac340
+  - e3c6fe8f76924e54fb94f74b53581c5a
+  - 4cc7bd9603958af4ca97c2f02a0aed1f
+  - 9331a1fdd6a4eaa4db26592de4e6e536
+  - 3d67569aeb123434db92459fda4e8d87
+  - 9f647f3d7c46a4b44813e2afb2ad1233
+  - e5576d0fab2009b44983e6d7e65a887e
+  - 570fddbd9343b5f4e8f56f57646da109
+  - ffbcafa86b755af469c018e10b32ead2
+  - fc4c82e2f792ecc4bbc38fefd417af28
+  - 3e0687197545fd744860ac364ecc6207
+  - 60b663ffd62ecd743b2175002b00a157
+  - a628ddb4914911a48ad6836cee24ec90
+  - 7d64fee712ba9eb45bd4a03190ae5ed0
+  - 3635421dc745c984aa2b2c10b1740e4d
+  - 543344f5ea80fe644b99677c158f1880
+  - ccdf4cfcba500514abc0881137718108
+  - f592805c06343fa4d87887ce5fec6810
+  - 5d17570e93d01f1448fc748cda966d9b
+  - ffb850289390b0f4fa43a8a6cc9c28c0
+  - 924ac4d3b23f94842aaf75e814e8270e
+  - c7bd6257aadf81f4197d182a9902d569
+  - ded7e975fb2e3384692356f4f0d0d27c
+  - 440af4dc55aaee44fa988feab43738a1
+  - 747cdd8ee84d9d3498cbb7d4fd298e57
+  - 4d533c96904408d44b948bb509fbf055
+  - 517208762b4436644a0b54d7680b1ca3
+  - 0af2a411d64d1e94bb452dafbb3833b8
+  - 9a6f6f871c210734b9d72ac2180a837a
+  - 3dfb7359762389840a927311dc174968
+  - cf01912351c00424a8e212c6668d0365
+  - 48f5d9eb949a80e4e838e4573df36653
+  - 28f0c80bba5e39643a3300fdfda2ff13
+  - 4aa048d53cc9f7349a20a76f6d14109f
+  - aa52a0fef0ebcae4ba2656d64c5e32db
+  - ca34ebbe1be30394781d375ae19c9e81
+  - aafb841a37802d3429bb0cc493702f8c
+  - fb0d0a75ecda4594eb0ddac9d77caca1
+  - fc10ccc7212dce041beaff96a12ff066
+  - d39e4b7ae83b5f849b0fd5fdb13eda38
+  - eaa19aa77204a164ca4a6b68822e3a86
+  - 3d3a365a4fce739458ebbd2e445f386b
+  - e70d853a32e76ac45a0e78eb3bd9e050
+  - 55a812eeb78020440adb06e825044642
+  - 0581a31be2e60e04abb3d7fcadf51661
+  - 48d79e0f90ab41740bc219cd691ae2e6
+  - 53c46edc4d8e36d4790b76a242d187a1
+  - a93e10fb1dbfb4a49bc2d5b9458c8ed1
+  - 5021be657a159fc4681e9bb9aa7f893f
+  processorInfos:
+  - {fileID: 7154877603730428267}
   exportSettings:
-    fileName: 
-    frameCount: 0
+    fileName: Assets/Enemies/Common/VFX/Sprites/ExplosionSequence_10x10.png
+    frameCount: 1
     outputShape: 0
-    exportMode: 0
+    exportMode: 2
     exportAlpha: 1
     exportSeparateAlpha: 0
     sRGB: 1
@@ -32,3 +133,32 @@ MonoBehaviour:
     selectedProcessor: -1
     lockedProcessor: -1
   inheritSettingsReference: {fileID: 0}
+--- !u!114 &5780931058283266846
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77e015c9f1a1eb44a23bc84ec1b265d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FlipbookNumU: 10
+  FlipbookNumV: 10
+  Mode: 0
+--- !u!114 &7154877603730428267
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43fd70c9b64e53a4e8702dbd00412a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enabled: 1
+  Settings: {fileID: 5780931058283266846}

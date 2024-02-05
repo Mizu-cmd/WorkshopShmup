@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -24,6 +25,11 @@ public class SecondaryWeaponProjectile : MonoBehaviour
     public void Update()
     {
         // The center of the arc
+        if (targetTransform == null || targetTransform.IsDestroyed())
+        {
+            Destroy(gameObject);
+            return;
+        }
         Vector3 center = (spawnTransform.position + targetTransform.position) * 0.5F;
 
         // move the center a bit downwards to make the arc vertical

@@ -1,4 +1,5 @@
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SecondaryWeapon : Weapon
@@ -9,6 +10,8 @@ public class SecondaryWeapon : Weapon
     public Transform targetTransform { get; set; }
     public override void Shoot()
     {
+        if (targetTransform.IsDestroyed() || targetTransform == null) return;
+        
         if (IsReloading) return;
         
         if (CurrentAmmo <= 0)
