@@ -7,7 +7,9 @@ public class EnemyDrone : Enemy
 
     [SerializeField] private float moveLenght = 5f;
     [SerializeField] private float minShootDelay, maxShootDelay;
+    [SerializeField] public AudioClip AudioFly;
     [SerializeField] public AudioClip AudioShoot;
+        
     [SerializeField] private TrailRenderer bulletTrail;
 
     private RaycastHit _hit;
@@ -22,7 +24,7 @@ public class EnemyDrone : Enemy
     {
         base.Start();
         StartCoroutine(ShootDelay());
-        AudioSource.PlayClipAtPoint(AudioShoot, transform.position, 0.2f);
+        AudioSource.PlayClipAtPoint(AudioFly, transform.position, 0.2f);
     }
 
     public override void Destroy()
@@ -48,6 +50,7 @@ public class EnemyDrone : Enemy
 
     private void Shoot()
     {
+        AudioSource.PlayClipAtPoint(AudioShoot, transform.position, 0.2f);
         var position = BulletSpawn.transform.position;
         TrailRenderer trailRenderer = Instantiate(bulletTrail, position, Quaternion.identity);
         Ray ray = new Ray(position, transform.forward);
