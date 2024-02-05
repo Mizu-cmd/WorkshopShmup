@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SecondaryWeapon : Weapon
 {
+    [SerializeField] public AudioClip AudioShoot;
     [SerializeField] private SecondaryWeaponProjectile secondaryWeaponProjectile;
     private float _lastShot = 0f;
     
@@ -29,5 +30,6 @@ public class SecondaryWeapon : Weapon
         projectile.SecondaryWeapon = this;
         
         _lastShot = Time.time;
+        AudioSource.PlayClipAtPoint(AudioShoot, transform.position, 0.2f);
     }
 }

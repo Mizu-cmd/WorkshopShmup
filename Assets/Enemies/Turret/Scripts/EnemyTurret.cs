@@ -22,7 +22,7 @@ public class EnemyTurret : Enemy
 
     IEnumerator Shoot()
     {
-        AudioSource.PlayClipAtPoint(AudioShoot, transform.position, 0.9f);
+        AudioSource.PlayClipAtPoint(AudioShoot, transform.position, 0.2f);
         yield return new WaitForSeconds(2);
         var molo = Instantiate(molotov, BulletSpawn.transform.position, BulletSpawn.transform.rotation);
         var rb = molo.GetComponent<Rigidbody>();

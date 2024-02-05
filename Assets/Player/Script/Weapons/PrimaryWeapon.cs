@@ -6,6 +6,7 @@ public class PrimaryWeapon : Weapon
     private float _lastShot = 0f;
     private RaycastHit _hit;
     [SerializeField] private TrailRenderer bulletTrail;
+    [SerializeField] public AudioClip AudioShoot;
     public override void Shoot()
     {
         if (IsReloading) return;
@@ -28,6 +29,8 @@ public class PrimaryWeapon : Weapon
             StartCoroutine(SpawnTrail(trailRenderer, transform.forward * 100, false));
         _lastShot = Time.time;
         CurrentAmmo--;
+        
+        AudioSource.PlayClipAtPoint(AudioShoot, transform.position, 0.2f);
     }
     
     IEnumerator SpawnTrail(TrailRenderer trail, Vector3 hitPoint, bool madeImpact)
