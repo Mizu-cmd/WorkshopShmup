@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SecondaryWeapon : Weapon
 {
+    [SerializeField] private Transform bulletSpawn;
     [SerializeField] private SecondaryWeaponProjectile secondaryWeaponProjectile;
     private float _lastShot = 0f;
     
@@ -23,8 +24,8 @@ public class SecondaryWeapon : Weapon
         
         if (!(Time.time > _lastShot + shootSpeed)) return;
 
-        var projectile = Instantiate(secondaryWeaponProjectile, transform.position, quaternion.identity);
-        projectile.spawnTransform = transform;
+        var projectile = Instantiate(secondaryWeaponProjectile, bulletSpawn.position, quaternion.identity);
+        projectile.spawnTransform = bulletSpawn;
         projectile.targetTransform = this.targetTransform;
         projectile.SecondaryWeapon = this;
         

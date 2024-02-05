@@ -7,6 +7,7 @@ public class PrimaryWeapon : Weapon
     private float _lastShot = 0f;
     private RaycastHit _hit;
     [SerializeField] private TrailRenderer bulletTrail;
+    [SerializeField] private Transform bulletSpawn;
     public override void Shoot()
     {
         if (IsReloading) return;
@@ -19,9 +20,10 @@ public class PrimaryWeapon : Weapon
         }
         
         if (!(Time.time > _lastShot + shootSpeed)) return;
-        
-        TrailRenderer trailRenderer = Instantiate(bulletTrail, transform.position, Quaternion.identity);
-        Ray ray = new Ray(transform.position, transform.forward);
+
+        var position = bulletSpawn.position;
+        TrailRenderer trailRenderer = Instantiate(bulletTrail, position, Quaternion.identity);
+        Ray ray = new Ray(position, transform.forward);
         
         if (Physics.Raycast(ray, out _hit, 50))
             StartCoroutine(SpawnTrail(trailRenderer, _hit.point, true));
