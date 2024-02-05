@@ -7,10 +7,11 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] private LevelScriptableObject _Level;
     [SerializeField] private int currentWave = 0;
-
     [SerializeField] private Array2DGameObject spawnPoints;
-
     [SerializeField] private GameObject Drone, Tank, Minion, Turret;
+    [SerializeField] private float delayBetweenWaves = 1f;
+
+    public int EnemyCount;
 
     private void SpawnWave()
     {
@@ -32,6 +33,12 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        SpawnWave();
+    }
+
+    private IEnumerator WaveSequence()
+    {
+        yield return new WaitForSeconds(delayBetweenWaves);
         SpawnWave();
     }
 
