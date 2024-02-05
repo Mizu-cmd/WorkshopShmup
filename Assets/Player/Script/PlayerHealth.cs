@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +5,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private float maxHealth = 100;
     [SerializeField] private Image healthFill;
+    [SerializeField] private Animation hitAnimation, lowLifeAnimation;
     public static PlayerHealth Instance;
     private float _healthPoint;
     public float HealthPoint
@@ -22,13 +20,12 @@ public class PlayerHealth : MonoBehaviour
 
     private void DamagePlayer(float value)
     {
-        if (value <= 0)
-        {
-            Die();
-            return;
-        }
+        hitAnimation.Play();
         healthFill.fillAmount = value / maxHealth;
-        
+        if (_healthPoint <= maxHealth / 10)
+            lowLifeAnimation.Play();
+        if (value <= 0)
+            Die();
     }
 
     private void Awake()
@@ -38,7 +35,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        HealthPoint = maxHealth;
+        _healthPoint = maxHealth;
     }
 
     private void Die()

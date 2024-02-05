@@ -76,7 +76,7 @@ public class EnemyDrone : Enemy
 
         if (madeImpact)
         {
-            print("hit");
+            DamagePlayer(damage);
         }
         Destroy(trail.gameObject, trail.time);
     }

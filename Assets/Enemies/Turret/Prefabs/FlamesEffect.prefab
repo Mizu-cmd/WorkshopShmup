@@ -90,7 +90,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 1.5e-43, z: 1.6734e-41, w: 0}
+  m_BoundingSphereOverride: {x: 9.26e-43, y: 1.39e-43, z: 0, w: 7.662899e+31}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -4958,6 +4958,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4772617557923170795}
+  - component: {fileID: 8097975922519259014}
   - component: {fileID: 1947567072786791735}
   - component: {fileID: 3432593021338761286}
   - component: {fileID: 3421536383203511519}
@@ -4984,6 +4985,19 @@ Transform:
   - {fileID: 978769961980029901}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &8097975922519259014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7689347457867079103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecddc7f09e1840841b50313bab756a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
 --- !u!198 &1947567072786791735
 ParticleSystem:
   m_ObjectHideFlags: 0
