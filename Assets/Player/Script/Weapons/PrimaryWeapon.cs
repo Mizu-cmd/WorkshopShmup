@@ -32,7 +32,7 @@ public class PrimaryWeapon : Weapon
     }
     
     IEnumerator SpawnTrail(TrailRenderer trail, Vector3 hitPoint, bool madeImpact)
-    {
+    { 
         Vector3 startPosition = trail.transform.position;
 
         var distance = Vector3.Distance(startPosition, hitPoint);

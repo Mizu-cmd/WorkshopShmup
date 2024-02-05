@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class TargetSelector : MonoBehaviour
 {
-    private Text selector;
+    private Image selector;
     private SecondaryWeapon _weapon;
     private Camera _camera;
     
     private void Start()
     {
-        selector = GetComponent<Text>();
+        selector = GetComponent<Image>();
         _weapon = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<SecondaryWeapon>();
         _camera = Camera.main;
     }
@@ -31,8 +31,7 @@ public class TargetSelector : MonoBehaviour
         if (_weapon.targetTransform != null)
         {
             var destination = _camera.WorldToScreenPoint(_weapon.targetTransform.position);
-            selector.rectTransform.position =
-                Vector3.Lerp(selector.rectTransform.position, destination, Time.deltaTime * 5f);
+            selector.rectTransform.position = Vector3.Lerp(selector.rectTransform.position, destination, Time.deltaTime * 5f);
         }
     }
 }
