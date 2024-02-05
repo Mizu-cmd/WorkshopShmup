@@ -8,7 +8,7 @@ public class EnemyTurret : Enemy
 {
     [SerializeField] private GameObject molotov;
     [SerializeField] private float minProjectileForce, maxProjectileForce;
-    
+    [SerializeField] public AudioClip AudioShoot;
     public override void Spawn()
     {
         throw new System.NotImplementedException();
@@ -22,6 +22,7 @@ public class EnemyTurret : Enemy
 
     IEnumerator Shoot()
     {
+        AudioSource.PlayClipAtPoint(AudioShoot, transform.position, 0.9f);
         yield return new WaitForSeconds(2);
         var molo = Instantiate(molotov, BulletSpawn.transform.position, BulletSpawn.transform.rotation);
         var rb = molo.GetComponent<Rigidbody>();
