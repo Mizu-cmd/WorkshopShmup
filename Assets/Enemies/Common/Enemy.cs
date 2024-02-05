@@ -48,6 +48,7 @@ public abstract class Enemy : MonoBehaviour
     public virtual void Destroy()
     {
         PlayerScore.Instance.AddScore(Score);
+        LevelManager.Instance.EnemyCount -- ;
         var transform = explosionVFX.transform;
         var explosion = Instantiate(explosionVFX, transform.position, transform.rotation);
         explosion.gameObject.SetActive(true);

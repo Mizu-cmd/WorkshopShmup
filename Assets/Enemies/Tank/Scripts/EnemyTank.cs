@@ -49,7 +49,7 @@ public class EnemyTank : Enemy
     {
         yield return new WaitForSeconds(Random.Range(minShotDelay, maxShotDelay));
         _animator.Play("Shoot", 1, 0f);
-        _impulseSource.GenerateImpulse(0.1f);
+        _impulseSource.GenerateImpulse(0.2f);
         AudioSource.PlayClipAtPoint(shootClip ,transform.position, 0.1f);
         _muzzleFlash.Play();
         

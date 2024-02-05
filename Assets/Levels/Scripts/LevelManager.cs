@@ -2,19 +2,38 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] private LevelScriptableObject _Level;
     [SerializeField] private int currentWave = 0;
     [SerializeField] private Array2DGameObject spawnPoints;
-    [SerializeField] private GameObject Drone, Tank, Minion, Turret;
+    [SerializeField] private Enemy Drone, Tank, Minion, Turret;
     [SerializeField] private float delayBetweenWaves = 1f;
 
-    public int EnemyCount;
-
+    private int _enemyCount;
+    public static LevelManager Instance { get; private set; }
+    public int EnemyCount
+    {
+        get { return _enemyCount;}
+        set
+        {
+            _enemyCount = value;
+            if (_enemyCount <= 0)
+            {
+                currentWave++;
+                StartCoroutine(WaveSequence());
+            }
+        }
+    }
     private void SpawnWave()
     {
+        if (currentWave == _Level.EnemyWaves.Length)
+        {
+            SceneManager.LoadScene("MainMenu");
+            return;
+        }
         var enemySequence = _Level.EnemyWaves[currentWave];
         for (int y = 0; y < enemySequence.GridSize.y; y++)
         {
@@ -24,7 +43,8 @@ public class LevelManager : MonoBehaviour
                 var position = spawnPoints.GetCell(x, y).transform.position;
                 if (position != null && enemy != null)
                 {
-                    var go = Instantiate(enemy, position, Quaternion.identity).GetComponent<Enemy>();
+                    _enemyCount++;
+                    var go = Instantiate(enemy, position, enemy.transform.rotation);
                     go.Health *= _Level.HPMultiplicator.Evaluate((float) currentWave / 10);
                 }
             }
@@ -33,7 +53,8 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        SpawnWave();
+        Instance = this;
+        StartCoroutine(WaveSequence());
     }
 
     private IEnumerator WaveSequence()
@@ -42,7 +63,7 @@ public class LevelManager : MonoBehaviour
         SpawnWave();
     }
 
-    private GameObject GetEnemy(EnemyEnum enemyEnum)
+    private Enemy GetEnemy(EnemyEnum enemyEnum)
     {
         switch (enemyEnum)
         {

@@ -8,6 +8,7 @@ public class TankProjectile : MonoBehaviour
     private void Start()
     {
         transform.LookAt(GameObject.FindGameObjectWithTag("Player").transform);
+        Destroy(gameObject,3f);
     }
 
     void Update()

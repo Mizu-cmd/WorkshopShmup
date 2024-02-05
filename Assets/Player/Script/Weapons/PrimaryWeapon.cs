@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PrimaryWeapon : Weapon
@@ -51,7 +52,7 @@ public class PrimaryWeapon : Weapon
         {
             HandleImpact(hitPoint, _hit.normal);
             Enemy enemy;
-            if (_hit.transform.gameObject != null && _hit.transform.gameObject.TryGetComponent(out enemy))
+            if (!_hit.transform.gameObject.IsDestroyed() && _hit.transform.gameObject.TryGetComponent<Enemy>(out enemy))
                 enemy.Damage(damage);
         }
         Destroy(trail.gameObject, trail.time);
