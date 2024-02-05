@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
@@ -27,5 +28,10 @@ public class EnemyTurret : Enemy
         var rb = molo.GetComponent<Rigidbody>();
         rb.AddForce(molo.transform.forward * Random.Range(minProjectileForce, maxProjectileForce));
         rb.AddTorque(Vector3.forward * 5);
+    }
+
+    private void Update()
+    {
+        transform.Translate(Vector3.back * LevelScroller.ScrollSpeed * Time.deltaTime);
     }
 }

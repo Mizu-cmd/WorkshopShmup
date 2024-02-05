@@ -16,9 +16,9 @@ public class TankProjectile : MonoBehaviour
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
-            print("player touched by tank");
+        if (other.CompareTag("Player"))
+            print("touched by tank");
     }
 }
