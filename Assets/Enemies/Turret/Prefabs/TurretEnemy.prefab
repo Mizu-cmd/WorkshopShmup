@@ -5503,7 +5503,7 @@ PrefabInstance:
     - target: {fileID: 6861139244653409299, guid: e13d5f69fe4c5d346a2015b35663f5c7,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8365591571696921092, guid: e13d5f69fe4c5d346a2015b35663f5c7,
         type: 3}
@@ -5513,7 +5513,7 @@ PrefabInstance:
     - target: {fileID: 8365591571696921092, guid: e13d5f69fe4c5d346a2015b35663f5c7,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5594,6 +5594,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Mortier
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 016c99483e4617a4387c2be85d87e55d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
