@@ -10,7 +10,7 @@ public class ShieldPickup : Pickup
     private bool activated = true;
     public override void Collect()
     {
-        if (!activated) return;
+        if (!activated || PlayerHealth.Instance.isShielded) return;
         PlayerHealth.Instance.isShielded = true;
         _shield = Instantiate(shieldMesh, GameObject.FindGameObjectWithTag("Player").transform);
         GetComponentInChildren<MeshRenderer>().enabled = false;

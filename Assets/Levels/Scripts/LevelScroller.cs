@@ -36,6 +36,5 @@ public class LevelScroller : MonoBehaviour
         newTile.transform.SetPositionAndRotation(start, Quaternion.Euler(rotation));
         StartCoroutine(SpawnTile());
         _currentTile = newTile;
-        Destroy(_currentTile, 20f);
     }
 }

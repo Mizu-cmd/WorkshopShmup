@@ -21,7 +21,7 @@ public class EnemyTank : Enemy
     public override void Start()
     {
         base.Start();
-        _animator = GetComponent<Animator>();
+        _animator = GetComponentInChildren<Animator>();
         _muzzleFlash = GetComponentInChildren<ParticleSystem>();
         StartCoroutine(Shoot());
     }

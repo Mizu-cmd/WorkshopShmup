@@ -4,14 +4,18 @@ using UnityEngine;
 
 public abstract class Pickup : MonoBehaviour
 {
-    [field : SerializeField]
+    [SerializeField] private float moveSpeed = 1f;
+    [field: SerializeField]
     public float DropRate { get; private set; }
     public abstract void Collect();
+    
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            Collect();
-        }
+        if (other.CompareTag("Player")) Collect();
+    }
+
+    private void Update()
+    {
+        transform.Translate(-Vector3.right * moveSpeed * Time.deltaTime);
     }
 }

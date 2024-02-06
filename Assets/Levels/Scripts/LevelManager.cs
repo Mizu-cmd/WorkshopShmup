@@ -11,7 +11,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Array2DGameObject spawnPoints;
     [SerializeField] private Enemy Drone, Tank, Minion, Turret;
     [SerializeField] private float delayBetweenWaves = 1f;
-
+    [field: SerializeField]
+    public Pickup[] pickups { get; set; }
     private int _enemyCount;
     public static LevelManager Instance { get; private set; }
     public int EnemyCount
@@ -75,5 +76,10 @@ public class LevelManager : MonoBehaviour
         }
 
         return null;
+    }
+
+    public float GetDropMultiplier()
+    {
+        return _Level.BonusMultiplicator.Evaluate((float)currentWave/10);
     }
 }

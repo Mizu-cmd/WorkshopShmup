@@ -46,10 +46,30 @@ public abstract class Enemy : MonoBehaviour
         PlayerScore.Instance.AddScore(Score);
         LevelManager.Instance.EnemyCount -- ;
         var transform = explosionVFX.transform;
+        SpawnPickup();
         var explosion = Instantiate(explosionVFX, transform.position, transform.rotation);
         explosion.gameObject.SetActive(true);
         CinemachineImpulseSource.GenerateImpulse(0.1f);
         Destroy(gameObject);
+    }
+
+    private void SpawnPickup()
+    {
+        var multiplier = LevelManager.Instance.GetDropMultiplier();
+
+        foreach (var p in LevelManager.Instance.pickups)
+        {
+            var random = Random.value;
+            if (p.DropRate * multiplier >= random)
+            {
+                var enemyPos = transform.position;
+                var pos = Vector3.zero;
+                pos.x = Random.Range(-2, 2) + enemyPos.x;
+                pos.z = Random.Range(-2, 2) + enemyPos.z;
+                pos.y = 2;
+                Instantiate(p, pos, p.transform.rotation);
+            }
+        }
     }
 
     public void RotateTowardPlayer()

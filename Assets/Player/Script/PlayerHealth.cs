@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private float maxHealth = 100;
+    [SerializeField] private float maxHealth = 20;
     [SerializeField] private Image healthFill;
     [SerializeField] private Animation hitAnimation, lowLifeAnimation;
     [SerializeField] private PlayableDirector deathTimeline;
@@ -18,6 +18,8 @@ public class PlayerHealth : MonoBehaviour
         set
         {
             if (_healthPoint <= 0 || isShielded) return;
+            if (value <= maxHealth / 4)
+                lowLifeAnimation.Play();
             DamagePlayer(value);
             _healthPoint = value;
         }
@@ -27,8 +29,6 @@ public class PlayerHealth : MonoBehaviour
     {
         hitAnimation.Play();
         healthFill.fillAmount = value / maxHealth;
-        if (_healthPoint <= maxHealth / 10)
-            lowLifeAnimation.Play();
         if (value <= 0)
             Die();
     }
