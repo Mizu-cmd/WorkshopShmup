@@ -12,6 +12,7 @@ public class LevelSelector : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private bool _hovered = false;
     [SerializeField] private string levelName;
     [SerializeField] private CinemachineVirtualCamera cam;
+    [SerializeField] private Animator fadeAnimator;
 
     private void Start()
     {
@@ -22,7 +23,7 @@ public class LevelSelector : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         if (_hovered)
         {
-            transform.position = Vector3.Lerp(transform.position, startPos + Vector3.left * 5, Time.deltaTime * 3f);
+            transform.position = Vector3.Lerp(transform.position, startPos + Vector3.left/2, Time.deltaTime * 3f);
             if (Input.GetMouseButtonDown(0))
             {
                 cam.Priority = 10;
@@ -36,6 +37,8 @@ public class LevelSelector : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     private IEnumerator loadLevel()
     {
+        yield return new WaitForSeconds(1.3f);
+        fadeAnimator.Play("FadeOut");
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(levelName, LoadSceneMode.Single);
     }

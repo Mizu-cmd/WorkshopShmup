@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
 
     private IEnumerator Start()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         globeCam.Priority = 1;
         yield return new WaitForSeconds(2.5f);
         _activateText = true;
