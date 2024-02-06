@@ -6,10 +6,10 @@ public abstract class Weapon : MonoBehaviour
 {
     protected bool IsReloading;
     [SerializeField] protected float damage, shootSpeed, reloadTime;
-    [SerializeField] protected short magSize;
+    [SerializeField] public short magSize;
     private short _currentAmmo;
     [SerializeField] private ParticleSystem impactSystem;
-    protected short CurrentAmmo
+    public short CurrentAmmo
     {
         get { return _currentAmmo; }
         set { _currentAmmo = value; }

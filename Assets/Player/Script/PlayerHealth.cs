@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.UI;
@@ -8,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private Image healthFill;
     [SerializeField] private Animation hitAnimation, lowLifeAnimation;
     [SerializeField] private PlayableDirector deathTimeline;
+    public bool isShielded = false;
     public static PlayerHealth Instance;
     private float _healthPoint;
     public float HealthPoint
@@ -15,7 +17,7 @@ public class PlayerHealth : MonoBehaviour
         get => _healthPoint;
         set
         {
-            if (_healthPoint <= 0) return;
+            if (_healthPoint <= 0 || isShielded) return;
             DamagePlayer(value);
             _healthPoint = value;
         }
