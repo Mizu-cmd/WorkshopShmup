@@ -75,9 +75,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1720cd1563b7674fb48c96af8d4a352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
+  health: 1
   rotationDelay: 2
-  damage: 2
+  damage: 0.5
   explosionVFX: {fileID: 2944079073355570420}
   <Speed>k__BackingField: 2
   <Score>k__BackingField: 10
