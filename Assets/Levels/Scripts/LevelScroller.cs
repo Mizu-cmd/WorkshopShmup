@@ -22,7 +22,7 @@ public class LevelScroller : MonoBehaviour
 
     private GameObject GetRandomTile()
     {
-        return tiles[Random.Range(0, tiles.Length - 1)];
+        return tiles[Random.Range(0, tiles.Length)];
     }
 
     private IEnumerator SpawnTile()
@@ -30,10 +30,8 @@ public class LevelScroller : MonoBehaviour
         yield return new WaitForSeconds(spawnDelay);
         var newTile = Instantiate(GetRandomTile(), _level);
         
-        var rotation = Vector3.zero;
-        rotation.y = 180;
-        var start = _currentTile.transform.GetChild(0).transform.position;
-        newTile.transform.SetPositionAndRotation(start, Quaternion.Euler(rotation));
+        var tileTransform = _currentTile.transform.GetChild(0).transform;
+        newTile.transform.SetPositionAndRotation(tileTransform.position, newTile.transform.rotation);
         StartCoroutine(SpawnTile());
         _currentTile = newTile;
     }
