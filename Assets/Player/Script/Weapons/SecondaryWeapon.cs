@@ -28,7 +28,8 @@ public class SecondaryWeapon : Weapon
         projectile.spawnTransform = bulletSpawn;
         projectile.targetTransform = this.targetTransform;
         projectile.SecondaryWeapon = this;
-        
+
+        CurrentAmmo--;
         _lastShot = Time.time;
     }
 }

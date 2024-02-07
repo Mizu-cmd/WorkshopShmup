@@ -12,7 +12,11 @@ public abstract class Weapon : MonoBehaviour
     public short CurrentAmmo
     {
         get { return _currentAmmo; }
-        set { _currentAmmo = value; }
+        set
+        {
+            _currentAmmo = value;
+            AmmoCounter.Instance.UpdateText();
+        }
     }
 
     public void Start()
