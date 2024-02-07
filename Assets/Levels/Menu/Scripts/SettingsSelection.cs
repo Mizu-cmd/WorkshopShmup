@@ -20,7 +20,7 @@ public class SettingsSelection : MonoBehaviour, IPointerEnterHandler, IPointerEx
     {
         if (_hovered)
         {
-            transform.position = Vector3.Lerp(transform.position, startPos + Vector3.left * 5, Time.deltaTime * 3f);
+            transform.position = Vector3.Lerp(transform.position, startPos + Vector3.left / 2, Time.deltaTime * 3f);
             if (Input.GetMouseButtonDown(0))
             {
                 cam.Priority = 10;

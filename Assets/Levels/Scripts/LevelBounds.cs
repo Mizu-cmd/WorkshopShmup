@@ -7,6 +7,7 @@ public class LevelBounds : MonoBehaviour
         Enemy enemy;
         if (other.TryGetComponent(out enemy))
             LevelManager.Instance.EnemyCount--;
+        
         Destroy(other.gameObject);
         
     }
