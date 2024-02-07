@@ -5548,22 +5548,22 @@ PrefabInstance:
     - target: {fileID: -9170320522840578364, guid: 4f2c16bfeca4e7e4f8ec111d4ee1c91b,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9971193
+      value: 0.9931773
       objectReference: {fileID: 0}
     - target: {fileID: -9170320522840578364, guid: 4f2c16bfeca4e7e4f8ec111d4ee1c91b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.07584923
+      value: 0.045986623
       objectReference: {fileID: 0}
     - target: {fileID: -9170320522840578364, guid: 4f2c16bfeca4e7e4f8ec111d4ee1c91b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.107049525
       objectReference: {fileID: 0}
     - target: {fileID: -9170320522840578364, guid: 4f2c16bfeca4e7e4f8ec111d4ee1c91b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.0049566627
       objectReference: {fileID: 0}
     - target: {fileID: -9170320522840578364, guid: 4f2c16bfeca4e7e4f8ec111d4ee1c91b,
         type: 3}
@@ -5781,6 +5781,7 @@ MonoBehaviour:
   rotationDelay: 2
   damage: 3
   explosionVFX: {fileID: 2762400024047581480}
+  AudioDeath: {fileID: 0}
   <Speed>k__BackingField: 0.04
   <Score>k__BackingField: 0
   <BulletSpawn>k__BackingField: {fileID: 5841415425030612087}

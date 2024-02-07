@@ -757,9 +757,11 @@ MonoBehaviour:
   magSize: 20
   impactSystem: {fileID: 1961194096368408689, guid: d32e4fbbde79786498c72b5df0d82b90,
     type: 3}
+  AudioReload: {fileID: 8300000, guid: 74ec2eb7f33e4b5429f2119d4edda20a, type: 3}
   bulletTrail: {fileID: 8506106604788109068, guid: 3af10c7a1dfbf7048a339a0ca921dd0c,
     type: 3}
   bulletSpawn: {fileID: 758530793}
+  AudioShoot: {fileID: 8300000, guid: 1237cd2133e2f5f4788fc4c578b0260e, type: 3}
 --- !u!114 &254964526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -778,6 +780,7 @@ MonoBehaviour:
   magSize: 40
   impactSystem: {fileID: 1961194096368408689, guid: d32e4fbbde79786498c72b5df0d82b90,
     type: 3}
+  AudioReload: {fileID: 0}
   bulletSpawn: {fileID: 2045387654}
   secondaryWeaponProjectile: {fileID: 193057608977274026, guid: cd1c37a9838dfb44eab3d29b48ea2f92,
     type: 3}
@@ -1258,6 +1261,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &394076030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394076027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50306c5621de4d0438897a17b844d513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FightingMusic: {fileID: 8300000, guid: 94f9266222f921d46ac4831a6825abc5, type: 3}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2014,6 +2030,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 394076029}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a5882e700bdbd3e4f85df46523a95af1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 394076030}
   m_SourcePrefab: {fileID: 100100000, guid: a5882e700bdbd3e4f85df46523a95af1, type: 3}
 --- !u!1 &655153579
 GameObject:
@@ -3065,7 +3085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0bce7af587274f49b971617fdb2cc30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Level: {fileID: 11400000, guid: 9c00bd3d054a02f49abbab9e99177ee3, type: 2}
+  _Level: {fileID: 11400000, guid: ced82279ff812eb4588aff056e24e366, type: 2}
   currentWave: 0
   spawnPoints:
     gridSize: {x: 5, y: 3}

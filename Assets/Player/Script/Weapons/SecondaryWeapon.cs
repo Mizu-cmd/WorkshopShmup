@@ -7,10 +7,14 @@ public class SecondaryWeapon : Weapon
     [SerializeField] private Transform bulletSpawn;
     [SerializeField] private SecondaryWeaponProjectile secondaryWeaponProjectile;
     private float _lastShot = 0f;
+   
     
+        
     public Transform targetTransform { get; set; }
+    
     public override void Shoot()
     {
+
         if (targetTransform.IsDestroyed() || targetTransform == null) return;
         
         if (IsReloading) return;

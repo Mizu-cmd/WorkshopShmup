@@ -5218,12 +5218,14 @@ MonoBehaviour:
   rotationDelay: 0
   damage: 0
   explosionVFX: {fileID: 6366886895695316527}
+  AudioDeath: {fileID: 8300000, guid: 8b10e8bfb53b4744ab60b13f2b38be66, type: 3}
   <Speed>k__BackingField: 0
   <Score>k__BackingField: 0
   <BulletSpawn>k__BackingField: {fileID: 1937136251098824806}
   molotov: {fileID: 7946799021898552459, guid: fe13528608c10924487e28e08aa879bd, type: 3}
   minProjectileForce: 200
   maxProjectileForce: 300
+  AudioShoot: {fileID: 8300000, guid: 2a1d6d408e778b442abb8e6b399d17d5, type: 3}
 --- !u!65 &4713375106814966898
 BoxCollider:
   m_ObjectHideFlags: 0

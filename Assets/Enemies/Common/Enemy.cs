@@ -9,6 +9,7 @@ public abstract class Enemy : MonoBehaviour
     public Transform PlayerTransform { get; private set; }
     [SerializeField] protected float health, rotationDelay, damage;
     [SerializeField] private VisualEffect explosionVFX;
+    [SerializeField] public AudioClip AudioDeath;
     protected CinemachineImpulseSource CinemachineImpulseSource;
     [field: SerializeField] public float Speed { get; set; }
     [field: SerializeField, Min(0)]
@@ -21,6 +22,7 @@ public abstract class Enemy : MonoBehaviour
             if (value <= 0)
             {
                 Destroy();
+                AudioSource.PlayClipAtPoint(AudioDeath, transform.position, 1.0f);
                 return;
             }
             health = value;

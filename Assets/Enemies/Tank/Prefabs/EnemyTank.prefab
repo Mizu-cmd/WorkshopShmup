@@ -5381,6 +5381,7 @@ MonoBehaviour:
   damage: 3
   explosionVFX: {fileID: 2762400024047581480, guid: 8319af1d62f2af64d8d46f66e395d826,
     type: 3}
+  AudioDeath: {fileID: 8300000, guid: 8b10e8bfb53b4744ab60b13f2b38be66, type: 3}
   <Speed>k__BackingField: 0.04
   <Score>k__BackingField: 0
   <BulletSpawn>k__BackingField: {fileID: 6283928974600014429}

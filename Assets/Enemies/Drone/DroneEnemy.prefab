@@ -79,12 +79,15 @@ MonoBehaviour:
   rotationDelay: 2
   damage: 0.5
   explosionVFX: {fileID: 2944079073355570420}
+  AudioDeath: {fileID: 8300000, guid: 8b10e8bfb53b4744ab60b13f2b38be66, type: 3}
   <Speed>k__BackingField: 2
   <Score>k__BackingField: 10
   <BulletSpawn>k__BackingField: {fileID: 5856155697158253027}
   moveLenght: 4
   minShootDelay: 1
   maxShootDelay: 4
+  AudioShoot: {fileID: 8300000, guid: a7de93e338590564785b7a46c7aa915c, type: 3}
+  AudioFly: {fileID: 8300000, guid: df4cf433be70d7d4bae3f94bd7fe3f47, type: 3}
   bulletTrail: {fileID: 8506106604788109068, guid: 3af10c7a1dfbf7048a339a0ca921dd0c,
     type: 3}
 --- !u!114 &8588200554504727194

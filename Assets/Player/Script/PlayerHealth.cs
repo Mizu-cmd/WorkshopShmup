@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
+    
     [SerializeField] private float maxHealth = 20;
     [SerializeField] private Image healthFill;
     [SerializeField] private Animation hitAnimation, lowLifeAnimation;
@@ -30,7 +31,8 @@ public class PlayerHealth : MonoBehaviour
         hitAnimation.Play();
         healthFill.fillAmount = value / maxHealth;
         if (value <= 0)
-            Die();
+        Die();
+        
     }
 
     private void Awake()
@@ -45,6 +47,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Die()
     {
+        
         deathTimeline.enabled = true;
         var mechCount = PlayerPrefs.GetInt("MechCount");
         PlayerPrefs.SetInt("MechCount", mechCount + 1);

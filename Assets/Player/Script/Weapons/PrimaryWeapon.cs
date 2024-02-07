@@ -8,9 +8,13 @@ public class PrimaryWeapon : Weapon
     private RaycastHit _hit;
     [SerializeField] private TrailRenderer bulletTrail;
     [SerializeField] private Transform bulletSpawn;
+    [SerializeField] public AudioClip AudioShoot;
+    
     public override void Shoot()
     {
+        
         if (IsReloading) return;
+
         
         if (CurrentAmmo <= 0)
         {
@@ -36,7 +40,7 @@ public class PrimaryWeapon : Weapon
     IEnumerator SpawnTrail(TrailRenderer trail, Vector3 hitPoint, bool madeImpact)
     { 
         Vector3 startPosition = trail.transform.position;
-
+        AudioSource.PlayClipAtPoint(AudioShoot, transform.position, 1.0f);
         var distance = Vector3.Distance(startPosition, hitPoint);
         var startingDistance = distance;
 
@@ -58,5 +62,6 @@ public class PrimaryWeapon : Weapon
                 enemy.Damage(damage);
         }
         Destroy(trail.gameObject, trail.time);
+
     }
 }

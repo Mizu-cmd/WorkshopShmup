@@ -9,6 +9,7 @@ public class PlayerShoot : MonoBehaviour
     private Weapon _special;
     private bool _shootSecondary;
     private VisualEffect _casingEffect;
+   
     private void Start()
     {
         _primary = GetComponentInChildren<PrimaryWeapon>();

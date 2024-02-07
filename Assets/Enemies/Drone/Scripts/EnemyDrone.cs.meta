@@ -4,8 +4,10 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - enemyScriptableObject: {fileID: 11400000, guid: 32758a8e85a98ea48944656a8b7f083a,
-      type: 2}
+  - explosionVFX: {instanceID: 0}
+  - <BulletSpawn>k__BackingField: {instanceID: 0}
+  - AudioShoot: {fileID: 8300000, guid: a7de93e338590564785b7a46c7aa915c, type: 3}
+  - bulletTrail: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

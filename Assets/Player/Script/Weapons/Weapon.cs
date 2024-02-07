@@ -9,6 +9,7 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField] public short magSize;
     private short _currentAmmo;
     [SerializeField] private ParticleSystem impactSystem;
+    [SerializeField] public AudioClip AudioReload;
     public short CurrentAmmo
     {
         get { return _currentAmmo; }
@@ -23,6 +24,7 @@ public abstract class Weapon : MonoBehaviour
 
     public IEnumerator Reload()
     {
+        AudioSource.PlayClipAtPoint(AudioReload, transform.position, 1.0f);
         yield return new WaitForSeconds(reloadTime);
         IsReloading = false;
         CurrentAmmo = magSize;
