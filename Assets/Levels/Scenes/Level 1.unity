@@ -1341,6 +1341,7 @@ MonoBehaviour:
   - {fileID: 928344734733199616, guid: 128bd381dddcc79468e6f9bab3e3d772, type: 3}
   - {fileID: 32318292612628824, guid: 3f2baa4c91155be40aaf8dc23362b7df, type: 3}
   - {fileID: 4308379493105337719, guid: 1b11c28d88547b44a93aaeb008c1fbd0, type: 3}
+  - {fileID: 2359491032086939895, guid: c03e86e3c538ed942ada8ed0a8b2c095, type: 3}
   spawnDelay: 1.5
   scrollSpeed: 13
   _currentTile: {fileID: 662961118}
@@ -3465,7 +3466,7 @@ MonoBehaviour:
       - {fileID: 1298399121}
   Drone: {fileID: 7193289725706714790, guid: 71f0241b289c28b4da0a0ebd848e0736, type: 3}
   Tank: {fileID: 6805921787607007787, guid: 7035d49cbb5267d41887e14d4431cc03, type: 3}
-  Minion: {fileID: 7621682826732903085, guid: 854d981e2a0051742a19387dde7528ea, type: 3}
+  Minion: {fileID: 3503350386853590607, guid: 854d981e2a0051742a19387dde7528ea, type: 3}
   Turret: {fileID: 1609644970166189893, guid: 8fb357de07beb8441b1a1172f2de450d, type: 3}
   delayBetweenWaves: 1
   <pickups>k__BackingField:
