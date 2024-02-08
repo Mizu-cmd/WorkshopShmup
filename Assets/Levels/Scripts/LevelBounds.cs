@@ -8,7 +8,7 @@ public class LevelBounds : MonoBehaviour
         if (other.TryGetComponent(out enemy))
             LevelManager.Instance.EnemyCount--;
         
-        Destroy(other.gameObject);
+        Destroy(other.transform.parent.parent.gameObject);
         
     }
 }

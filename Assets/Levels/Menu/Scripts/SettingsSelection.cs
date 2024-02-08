@@ -24,6 +24,7 @@ public class SettingsSelection : MonoBehaviour, IPointerEnterHandler, IPointerEx
             if (Input.GetMouseButtonDown(0))
             {
                 cam.Priority = 10;
+                SceneManager.LoadScene("Zoo");
             }
         }
         else transform.position = Vector3.Lerp(transform.position, startPos, Time.deltaTime * 3f);
