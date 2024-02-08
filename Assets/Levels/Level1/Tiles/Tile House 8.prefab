@@ -861,9 +861,10 @@ GameObject:
   - component: {fileID: 6646890601338081287}
   - component: {fileID: 1853360212707910378}
   - component: {fileID: 1163005115227786070}
+  - component: {fileID: 6513685663037223162}
   m_Layer: 0
-  m_Name: polySurface9164
-  m_TagString: Untagged
+  m_Name: Street
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -937,6 +938,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6513685663037223162
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302750658088801920}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3802698503490057728, guid: 83b99d007ab6f9c4d989ffd7b6bdf9bc, type: 3}
 --- !u!1 &329382276368157930
 GameObject:
   m_ObjectHideFlags: 0
@@ -5292,9 +5315,10 @@ GameObject:
   - component: {fileID: 6979791913279982469}
   - component: {fileID: 7176961283851767442}
   - component: {fileID: 4286617796130568805}
+  - component: {fileID: 4571133162157715155}
   m_Layer: 0
-  m_Name: polySurface9164 (2)
-  m_TagString: Untagged
+  m_Name: Street
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5368,6 +5392,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4571133162157715155
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2195524305797965247}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3802698503490057728, guid: 83b99d007ab6f9c4d989ffd7b6bdf9bc, type: 3}
 --- !u!1 &2199954100827068940
 GameObject:
   m_ObjectHideFlags: 0
@@ -8800,7 +8846,7 @@ GameObject:
   - component: {fileID: 4104973435160572979}
   - component: {fileID: 3526824081165344889}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10805,9 +10851,10 @@ GameObject:
   - component: {fileID: 7379829549817027738}
   - component: {fileID: 7336814837349694455}
   - component: {fileID: 5047263175493864906}
+  - component: {fileID: 6667930034996804045}
   m_Layer: 0
-  m_Name: polySurface9164 (3)
-  m_TagString: Untagged
+  m_Name: Street
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10881,6 +10928,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6667930034996804045
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4327778686649782532}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3802698503490057728, guid: 83b99d007ab6f9c4d989ffd7b6bdf9bc, type: 3}
 --- !u!1 &4333820678384617169
 GameObject:
   m_ObjectHideFlags: 0
@@ -12547,7 +12616,7 @@ GameObject:
   - component: {fileID: 1891238642475696776}
   - component: {fileID: 3623193146141173540}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14824,7 +14893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6810721706952195507}
   m_Layer: 0
-  m_Name: SM_villeLENNY
+  m_Name: House
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15344,9 +15413,10 @@ GameObject:
   - component: {fileID: 534460560789108044}
   - component: {fileID: 2040127517744121629}
   - component: {fileID: 5102805205586752463}
+  - component: {fileID: 6609906892660416410}
   m_Layer: 0
-  m_Name: polySurface9164 (1)
-  m_TagString: Untagged
+  m_Name: Street
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15420,6 +15490,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6609906892660416410
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6293047738658477793}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3802698503490057728, guid: 83b99d007ab6f9c4d989ffd7b6bdf9bc, type: 3}
 --- !u!1 &6300692035030858145
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public abstract class Weapon : MonoBehaviour
     private short _currentAmmo;
     [SerializeField] private ParticleSystem impactSystem;
     [SerializeField] public AudioClip AudioReload;
+
     public short CurrentAmmo
     {
         get { return _currentAmmo; }
@@ -20,10 +21,11 @@ public abstract class Weapon : MonoBehaviour
         }
     }
 
-    public void Start()
+    private void Start()
     {
         CurrentAmmo = magSize;
     }
+
     public abstract void Shoot();
 
     public IEnumerator Reload()

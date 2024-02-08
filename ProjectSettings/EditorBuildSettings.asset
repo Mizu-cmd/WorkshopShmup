@@ -13,10 +13,7 @@ EditorBuildSettings:
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Levels/Scenes/Level 2.unity
-    guid: d3a9a904593698c449a21bef2cd6abf3
-  - enabled: 1
-    path: Assets/Levels/Scenes/Level 3.unity
-    guid: 9a432c645f3d255458a366bcfae9f52d
+    guid: 3d4aa0b531557fe459b4241f633c9753
   - enabled: 1
     path: Assets/Levels/Scenes/Zoo.unity
     guid: ccf253fcf4f393747b903a61a38f18e3

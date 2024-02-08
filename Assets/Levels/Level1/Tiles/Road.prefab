@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 817898222562875727}
   - component: {fileID: 8054200558748844322}
   m_Layer: 0
-  m_Name: Plane (2)
+  m_Name: Trottoir
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,9 +117,10 @@ GameObject:
   - component: {fileID: 3299919499556002773}
   - component: {fileID: 6235248077886261471}
   - component: {fileID: 2357722687616828091}
+  - component: {fileID: 4457022648116596219}
   m_Layer: 0
-  m_Name: polySurface10464
-  m_TagString: Untagged
+  m_Name: Street
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,6 +193,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4457022648116596219
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3719541974627336401}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2094903320962015466, guid: 8b786a87ba9bca34591ac71a07c9ff7c, type: 3}
 --- !u!1 &3853979209484094249
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,9 +294,10 @@ GameObject:
   - component: {fileID: 524767299603451651}
   - component: {fileID: 6631952759259507744}
   - component: {fileID: 6561962459954342049}
+  - component: {fileID: 3147919472134620649}
   m_Layer: 0
-  m_Name: polySurface10464 (3)
-  m_TagString: Untagged
+  m_Name: Street
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -346,6 +370,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3147919472134620649
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5743843790074823680}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2094903320962015466, guid: 8b786a87ba9bca34591ac71a07c9ff7c, type: 3}
 --- !u!1 &7644314343284520213
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,9 +403,10 @@ GameObject:
   - component: {fileID: 6992394216579973148}
   - component: {fileID: 8793707356882979081}
   - component: {fileID: 3410071859586898335}
+  - component: {fileID: 442450235344732303}
   m_Layer: 0
-  m_Name: polySurface10464 (1)
-  m_TagString: Untagged
+  m_Name: Street
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -432,6 +479,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &442450235344732303
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7644314343284520213}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2094903320962015466, guid: 8b786a87ba9bca34591ac71a07c9ff7c, type: 3}
 --- !u!1 &8139698387381020990
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,7 +514,7 @@ GameObject:
   - component: {fileID: 8869187236327496027}
   - component: {fileID: 3382741358848230943}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Trottoir
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -549,9 +618,10 @@ GameObject:
   - component: {fileID: 463532336767079512}
   - component: {fileID: 2484860368305365195}
   - component: {fileID: 123529831134184320}
+  - component: {fileID: 3463796376962551012}
   m_Layer: 0
-  m_Name: polySurface10464 (2)
-  m_TagString: Untagged
+  m_Name: Street
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -624,6 +694,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3463796376962551012
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8949086018887674616}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2094903320962015466, guid: 8b786a87ba9bca34591ac71a07c9ff7c, type: 3}
 --- !u!1 &9058148212626201295
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,7 +726,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6568306593477346070}
   m_Layer: 0
-  m_Name: TilePrefab2
+  m_Name: Road
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

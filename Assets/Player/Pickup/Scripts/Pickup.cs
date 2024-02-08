@@ -8,7 +8,12 @@ public abstract class Pickup : MonoBehaviour
     [field: SerializeField]
     public float DropRate { get; private set; }
     public abstract void Collect();
-    
+
+    private void Start()
+    {
+        Destroy(gameObject, 10f);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) Collect();

@@ -5307,8 +5307,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4587326387841733397}
   - {fileID: 6127047118837868500}
+  - {fileID: 4587326387841733397}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &5621802090632494434
@@ -5379,8 +5379,7 @@ MonoBehaviour:
   health: 5
   rotationDelay: 2
   damage: 3
-  explosionVFX: {fileID: 2762400024047581480, guid: 8319af1d62f2af64d8d46f66e395d826,
-    type: 3}
+  explosionVFX: {fileID: 639421004237351693}
   AudioDeath: {fileID: 8300000, guid: 8b10e8bfb53b4744ab60b13f2b38be66, type: 3}
   <Speed>k__BackingField: 0.04
   <Score>k__BackingField: 0
@@ -5903,6 +5902,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e13d5f69fe4c5d346a2015b35663f5c7, type: 3}
+--- !u!2083052967 &639421004237351693 stripped
+VisualEffect:
+  m_CorrespondingSourceObject: {fileID: 7403757818224630762, guid: e13d5f69fe4c5d346a2015b35663f5c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 7953568605393744103}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4587326387841733397 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5893441192592696306, guid: e13d5f69fe4c5d346a2015b35663f5c7,

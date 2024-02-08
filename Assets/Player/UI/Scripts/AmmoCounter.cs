@@ -10,13 +10,18 @@ public class AmmoCounter : MonoBehaviour
     private TextMeshPro _counter;
     public static AmmoCounter Instance;
 
-    private void Start()
+    private void Awake()
     {
         Instance = this;
         var player = GameObject.FindGameObjectWithTag("Player");
         _primary = player.GetComponentInChildren<PrimaryWeapon>();
         _secondary = player.GetComponentInChildren<SecondaryWeapon>();
         _counter = GetComponent<TextMeshPro>();
+    }
+
+    private void Start()
+    {
+
     }
 
     public void UpdateText()

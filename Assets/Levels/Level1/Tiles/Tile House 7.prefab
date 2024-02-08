@@ -2140,9 +2140,10 @@ GameObject:
   - component: {fileID: 5160566207538834711}
   - component: {fileID: 8695703973469718945}
   - component: {fileID: 2137228051013019425}
+  - component: {fileID: 7840849263670917271}
   m_Layer: 0
   m_Name: Street
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2216,6 +2217,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7840849263670917271
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669104581632292025}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3802698503490057728, guid: 83b99d007ab6f9c4d989ffd7b6bdf9bc, type: 3}
 --- !u!1 &682648375112265615
 GameObject:
   m_ObjectHideFlags: 0
@@ -8803,9 +8826,10 @@ GameObject:
   - component: {fileID: 6877307419247812319}
   - component: {fileID: 5421727020320506191}
   - component: {fileID: 875014298976211427}
+  - component: {fileID: 6851118293506568007}
   m_Layer: 0
   m_Name: Street
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8879,6 +8903,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6851118293506568007
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2629288653558637858}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3802698503490057728, guid: 83b99d007ab6f9c4d989ffd7b6bdf9bc, type: 3}
 --- !u!1 &2643955824217605495
 GameObject:
   m_ObjectHideFlags: 0
@@ -27522,9 +27568,10 @@ GameObject:
   - component: {fileID: 4634676636512529062}
   - component: {fileID: 5784437022470443358}
   - component: {fileID: 5767493005361263721}
+  - component: {fileID: 7515245424208148027}
   m_Layer: 0
   m_Name: Street
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27598,6 +27645,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7515245424208148027
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8847412707417350687}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3802698503490057728, guid: 83b99d007ab6f9c4d989ffd7b6bdf9bc, type: 3}
 --- !u!1 &8863435513872745434
 GameObject:
   m_ObjectHideFlags: 0
@@ -28113,9 +28182,10 @@ GameObject:
   - component: {fileID: 7140261619117498232}
   - component: {fileID: 2906187677536898013}
   - component: {fileID: 1188615381499341429}
+  - component: {fileID: 982094316136760762}
   m_Layer: 0
   m_Name: Street
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28189,6 +28259,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &982094316136760762
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9032447203660905991}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3802698503490057728, guid: 83b99d007ab6f9c4d989ffd7b6bdf9bc, type: 3}
 --- !u!1 &9078500299194347090
 GameObject:
   m_ObjectHideFlags: 0
