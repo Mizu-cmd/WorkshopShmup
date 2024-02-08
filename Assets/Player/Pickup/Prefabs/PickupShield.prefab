@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16dfadd771ca8de45bc3db35085bdb06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
+  moveSpeed: 3
   <DropRate>k__BackingField: 0.1
   duration: 2
   shieldMesh: {fileID: 4155830162131969236, guid: 0b35210db25b40b41990d58d5cca356e,

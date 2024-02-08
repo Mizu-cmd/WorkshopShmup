@@ -891,7 +891,7 @@ MonoBehaviour:
   magSize: 40
   impactSystem: {fileID: 1961194096368408689, guid: d32e4fbbde79786498c72b5df0d82b90,
     type: 3}
-  AudioReload: {fileID: 0}
+  AudioReload: {fileID: 8300000, guid: 74ec2eb7f33e4b5429f2119d4edda20a, type: 3}
   bulletSpawn: {fileID: 2045387654}
   secondaryWeaponProjectile: {fileID: 193057608977274026, guid: cd1c37a9838dfb44eab3d29b48ea2f92,
     type: 3}
@@ -3439,7 +3439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0bce7af587274f49b971617fdb2cc30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Level: {fileID: 11400000, guid: ced82279ff812eb4588aff056e24e366, type: 2}
+  _Level: {fileID: 11400000, guid: 66a460e3cd56f2a4184242fd4346c287, type: 2}
   currentWave: 0
   spawnPoints:
     gridSize: {x: 5, y: 3}
@@ -5457,7 +5457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 023a97f58396e8848a5dc4ac181a8f70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 25
   healthFill: {fileID: 1809445485}
   hitAnimation: {fileID: 832575520}
   lowLifeAnimation: {fileID: 451456543}

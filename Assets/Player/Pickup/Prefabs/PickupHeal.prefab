@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaf8811defd050f429832314c7b0086a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
+  moveSpeed: 3
   <DropRate>k__BackingField: 0.1
   healthGain: 5
 --- !u!136 &519543207216536619
