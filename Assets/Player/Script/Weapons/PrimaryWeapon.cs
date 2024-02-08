@@ -58,7 +58,7 @@ public class PrimaryWeapon : Weapon
         {
             HandleImpact(hitPoint, _hit.normal);
             Enemy enemy;
-            if (!_hit.transform.gameObject.IsDestroyed() && _hit.transform.gameObject.TryGetComponent<Enemy>(out enemy))
+            if (!_hit.transform.gameObject.IsDestroyed() && _hit.transform.gameObject.TryGetComponent(out enemy))
                 enemy.Damage(damage);
         }
         Destroy(trail.gameObject, trail.time);
