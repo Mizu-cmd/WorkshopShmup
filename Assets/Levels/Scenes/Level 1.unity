@@ -1154,7 +1154,7 @@ MonoBehaviour:
   - {fileID: 2359491032086939895, guid: 5b6a0f9543d1f1445a6bbe3032c69fe1, type: 3}
   - {fileID: 2359491032086939895, guid: 8a3e30a36b552344da78315d93cd560b, type: 3}
   - {fileID: 2359491032086939895, guid: c56da01cdfc142643866b79fd3d7174f, type: 3}
-  spawnDelay: 1
+  spawnDelay: 1.3
   scrollSpeed: 13
   _currentTile: {fileID: 662961118}
 --- !u!114 &380550904
@@ -3227,6 +3227,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1328726279}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1055302617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1055302618}
+  - component: {fileID: 1055302619}
+  m_Layer: 0
+  m_Name: PlayerBlock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1055302618
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055302617}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.38268274, z: -0, w: 0.9238798}
+  m_LocalPosition: {x: 52.94, y: 0.66, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 41.349026}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1328726279}
+  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+--- !u!65 &1055302619
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055302617}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1073629826 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8004513233410029888, guid: 5b6a0f9543d1f1445a6bbe3032c69fe1,
@@ -3559,7 +3612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0bce7af587274f49b971617fdb2cc30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Level: {fileID: 11400000, guid: 66a460e3cd56f2a4184242fd4346c287, type: 2}
+  _Level: {fileID: 11400000, guid: ced82279ff812eb4588aff056e24e366, type: 2}
   currentWave: 0
   spawnPoints:
     gridSize: {x: 5, y: 3}
@@ -4013,6 +4066,8 @@ Transform:
   - {fileID: 754572193}
   - {fileID: 1024245125}
   - {fileID: 2117837970}
+  - {fileID: 1380875747}
+  - {fileID: 1055302618}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1361287962 stripped
@@ -4087,6 +4142,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1328726279}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1380875746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1380875747}
+  - component: {fileID: 1380875748}
+  m_Layer: 0
+  m_Name: PlayerBlock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1380875747
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380875746}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.38268274, z: -0, w: 0.9238798}
+  m_LocalPosition: {x: 10.95, y: 0.66, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 41.349026}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1328726279}
+  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+--- !u!65 &1380875748
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380875746}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1386378724
 GameObject:
   m_ObjectHideFlags: 0
@@ -5240,6 +5348,7 @@ GameObject:
   - component: {fileID: 2089212829}
   - component: {fileID: 2089212828}
   - component: {fileID: 2089212827}
+  - component: {fileID: 2089212833}
   - component: {fileID: 2089212826}
   - component: {fileID: 2089212825}
   - component: {fileID: 2089212830}
@@ -5360,6 +5469,38 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: a3bb14bc-a0f9-4df2-bdc3-c9b923441ace
     m_ActionName: Player/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2089212826}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
+        m_MethodName: InputSelectNextEnemy
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 13e4ac18-f327-4771-abfb-cf5e740de353
+    m_ActionName: Player/SelectNext[/SwitchProControllerHID/rightStick/right]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2089212826}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
+        m_MethodName: InputSelectPreviousEnemy
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b4c7d0b3-f220-4709-a94b-edcbbe1fed02
+    m_ActionName: Player/SelectPrevious[/SwitchProControllerHID/rightStick/left]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -5457,6 +5598,18 @@ MonoBehaviour:
   lowLifeAnimation: {fileID: 451456543}
   deathTimeline: {fileID: 1086163264}
   isShielded: 0
+--- !u!114 &2089212833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089212824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf0ac516ea47e746911283fd09bb336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2117536552
 GameObject:
   m_ObjectHideFlags: 0

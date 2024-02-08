@@ -57,7 +57,7 @@ public class PrimaryWeapon : Weapon
         if (madeImpact)
         {
             HandleImpact(hitPoint, _hit.normal);
-            if (!_hit.transform.gameObject.IsDestroyed())
+            if (_hit.transform.gameObject != null)
             {
                 Enemy enemy;
                 if (_hit.transform.gameObject.TryGetComponent(out enemy))
@@ -67,6 +67,5 @@ public class PrimaryWeapon : Weapon
             }
         }
         Destroy(trail.gameObject, trail.time);
-
     }
 }

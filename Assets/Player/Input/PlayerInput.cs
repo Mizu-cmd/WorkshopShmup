@@ -37,4 +37,14 @@ public class PlayerInput : MonoBehaviour
     {
         
     }
+
+    public void InputSelectNextEnemy(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed) ControllerTarget.SelectNext();
+    }
+    
+    public void InputSelectPreviousEnemy(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed) ControllerTarget.SelectPrevious();
+    }
 }

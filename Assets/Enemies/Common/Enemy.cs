@@ -52,6 +52,8 @@ public abstract class Enemy : MonoBehaviour
         var explosion = Instantiate(explosionVFX, transform.position, transform.rotation);
         explosion.gameObject.SetActive(true);
         CinemachineImpulseSource.GenerateImpulse(0.1f);
+        ControllerTarget.Enemies.Remove(gameObject.transform);
+        ControllerTarget.CurrentEnemy = ControllerTarget.Enemies.Last;
         Destroy(gameObject);
     }
 

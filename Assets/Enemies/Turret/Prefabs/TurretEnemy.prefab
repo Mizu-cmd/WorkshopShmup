@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1633725156391595975}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ProjectileSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 1208627598356862800}
   - component: {fileID: 4582629827839993719}
   - component: {fileID: 5636940903243890850}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SmokeVFX Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 1609644970166189893}
   - component: {fileID: 4713375106814966898}
   - component: {fileID: 4969547576081152828}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TurretEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4815331526838605832}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 9093493516736702458}
   - component: {fileID: 8546110627836164141}
   - component: {fileID: 6747545760631763495}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SmokeVFX Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -515,10 +515,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_mortier
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1da514a1564aca3448a7f000faa68714,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3554501263734421383, guid: 1da514a1564aca3448a7f000faa68714,
         type: 3}
       propertyPath: m_Name
       value: Mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 3554501263734421383, guid: 1da514a1564aca3448a7f000faa68714,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -599,6 +609,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Explosion
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365591571696921092, guid: e13d5f69fe4c5d346a2015b35663f5c7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8365591571696921092, guid: e13d5f69fe4c5d346a2015b35663f5c7,
         type: 3}

@@ -71,6 +71,24 @@ public partial class @IAPlayer: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SelectNext"",
+                    ""type"": ""Button"",
+                    ""id"": ""13e4ac18-f327-4771-abfb-cf5e740de353"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SelectPrevious"",
+                    ""type"": ""Button"",
+                    ""id"": ""b4c7d0b3-f220-4709-a94b-edcbbe1fed02"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -271,6 +289,28 @@ public partial class @IAPlayer: IInputActionCollection2, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ba3ad62d-3e93-4343-bc54-08ba90b02cd2"",
+                    ""path"": ""<Gamepad>/rightStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SelectNext"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""21fe5a41-d06a-4540-b66b-0536d78a1d5d"",
+                    ""path"": ""<Gamepad>/rightStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SelectPrevious"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -284,6 +324,8 @@ public partial class @IAPlayer: IInputActionCollection2, IDisposable
         m_Player_Secondary = m_Player.FindAction("Secondary", throwIfNotFound: true);
         m_Player_Special = m_Player.FindAction("Special", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
+        m_Player_SelectNext = m_Player.FindAction("SelectNext", throwIfNotFound: true);
+        m_Player_SelectPrevious = m_Player.FindAction("SelectPrevious", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -350,6 +392,8 @@ public partial class @IAPlayer: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Secondary;
     private readonly InputAction m_Player_Special;
     private readonly InputAction m_Player_Pause;
+    private readonly InputAction m_Player_SelectNext;
+    private readonly InputAction m_Player_SelectPrevious;
     public struct PlayerActions
     {
         private @IAPlayer m_Wrapper;
@@ -359,6 +403,8 @@ public partial class @IAPlayer: IInputActionCollection2, IDisposable
         public InputAction @Secondary => m_Wrapper.m_Player_Secondary;
         public InputAction @Special => m_Wrapper.m_Player_Special;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
+        public InputAction @SelectNext => m_Wrapper.m_Player_SelectNext;
+        public InputAction @SelectPrevious => m_Wrapper.m_Player_SelectPrevious;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -383,6 +429,12 @@ public partial class @IAPlayer: IInputActionCollection2, IDisposable
             @Pause.started += instance.OnPause;
             @Pause.performed += instance.OnPause;
             @Pause.canceled += instance.OnPause;
+            @SelectNext.started += instance.OnSelectNext;
+            @SelectNext.performed += instance.OnSelectNext;
+            @SelectNext.canceled += instance.OnSelectNext;
+            @SelectPrevious.started += instance.OnSelectPrevious;
+            @SelectPrevious.performed += instance.OnSelectPrevious;
+            @SelectPrevious.canceled += instance.OnSelectPrevious;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -402,6 +454,12 @@ public partial class @IAPlayer: IInputActionCollection2, IDisposable
             @Pause.started -= instance.OnPause;
             @Pause.performed -= instance.OnPause;
             @Pause.canceled -= instance.OnPause;
+            @SelectNext.started -= instance.OnSelectNext;
+            @SelectNext.performed -= instance.OnSelectNext;
+            @SelectNext.canceled -= instance.OnSelectNext;
+            @SelectPrevious.started -= instance.OnSelectPrevious;
+            @SelectPrevious.performed -= instance.OnSelectPrevious;
+            @SelectPrevious.canceled -= instance.OnSelectPrevious;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -426,5 +484,7 @@ public partial class @IAPlayer: IInputActionCollection2, IDisposable
         void OnSecondary(InputAction.CallbackContext context);
         void OnSpecial(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
+        void OnSelectNext(InputAction.CallbackContext context);
+        void OnSelectPrevious(InputAction.CallbackContext context);
     }
 }

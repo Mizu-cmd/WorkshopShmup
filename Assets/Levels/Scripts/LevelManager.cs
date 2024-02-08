@@ -35,6 +35,9 @@ public class LevelManager : MonoBehaviour
             SceneManager.LoadScene("MainMenu");
             return;
         }
+        
+        ControllerTarget.Enemies.Clear();
+        
         var enemySequence = _Level.EnemyWaves[currentWave];
         for (int y = 0; y < enemySequence.GridSize.y; y++)
         {
@@ -47,9 +50,12 @@ public class LevelManager : MonoBehaviour
                     _enemyCount++;
                     var go = Instantiate(enemy, position + enemy.transform.position, enemy.transform.rotation);
                     go.Health *= _Level.HPMultiplicator.Evaluate((float) currentWave / 10);
+                    ControllerTarget.Enemies.AddLast(go.transform);
                 }
             }
         }
+
+        ControllerTarget.CurrentEnemy = ControllerTarget.Enemies.First;
     }
 
     private void Start()
