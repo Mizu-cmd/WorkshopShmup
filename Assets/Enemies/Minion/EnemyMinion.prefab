@@ -1099,7 +1099,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 2
   rotationDelay: 2
-  damage: 10
+  damage: 100
   explosionVFX: {fileID: 1587406051594975010}
   AudioDeath: {fileID: 8300000, guid: 8b10e8bfb53b4744ab60b13f2b38be66, type: 3}
   <Speed>k__BackingField: 1

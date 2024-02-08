@@ -5383,7 +5383,7 @@ MonoBehaviour:
     type: 3}
   AudioDeath: {fileID: 8300000, guid: 8b10e8bfb53b4744ab60b13f2b38be66, type: 3}
   <Speed>k__BackingField: 0.04
-  <Score>k__BackingField: 0
+  <Score>k__BackingField: 200
   <BulletSpawn>k__BackingField: {fileID: 6283928974600014429}
   reachDistance: 15
   minShotDelay: 1

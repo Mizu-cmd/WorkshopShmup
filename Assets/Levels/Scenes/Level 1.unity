@@ -885,10 +885,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 064b66ed7c3b4a545bb95e09e532ce3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 0.5
   shootSpeed: 0.1
   reloadTime: 2
-  magSize: 40
+  magSize: 50
   impactSystem: {fileID: 1961194096368408689, guid: d32e4fbbde79786498c72b5df0d82b90,
     type: 3}
   AudioReload: {fileID: 8300000, guid: 74ec2eb7f33e4b5429f2119d4edda20a, type: 3}
@@ -5458,7 +5458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 023a97f58396e8848a5dc4ac181a8f70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 25
+  maxHealth: 30
   healthFill: {fileID: 1809445485}
   hitAnimation: {fileID: 832575520}
   lowLifeAnimation: {fileID: 451456543}
