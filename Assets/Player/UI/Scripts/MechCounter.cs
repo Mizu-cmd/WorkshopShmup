@@ -14,6 +14,6 @@ public class MechCounter : MonoBehaviour
     private void OnEnable()
     {
         _mechCount = GetComponent<TextMeshProUGUI>();
-        _mechCount.text = $"Mech number : {PlayerPrefs.GetInt("MechCount")}";
+        _mechCount.text = $"Mech number : {PlayerPrefs.GetInt("MechCount")} \n Score : {PlayerPrefs.GetFloat("Score")}";
     }
 }

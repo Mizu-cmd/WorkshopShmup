@@ -45,6 +45,7 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         _healthPoint = maxHealth;
+        PlayerPrefs.SetFloat("Score", 0f);
     }
 
     private void Die()
@@ -54,6 +55,7 @@ public class PlayerHealth : MonoBehaviour
         var mechCount = PlayerPrefs.GetInt("MechCount");
         PlayerPrefs.SetInt("MechCount", mechCount + 1);
         Instantiate(explosion, transform.position, Quaternion.identity);
+        PlayerPrefs.SetFloat("Score", gameObject.GetComponent<PlayerScore>().Score);
         gameObject.SetActive(false);
     }
 }
