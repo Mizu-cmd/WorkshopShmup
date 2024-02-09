@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.UI;
+using UnityEngine.VFX;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private Image healthFill;
     [SerializeField] private Animation hitAnimation, lowLifeAnimation;
     [SerializeField] private PlayableDirector deathTimeline;
+    [SerializeField] private VisualEffect explosion;
     public bool isShielded = false;
     public static PlayerHealth Instance;
     private float _healthPoint;
@@ -31,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
         hitAnimation.Play();
         healthFill.fillAmount = value / maxHealth;
         if (value <= 0)
-        Die();
+            Die();
         
     }
 
@@ -51,5 +53,7 @@ public class PlayerHealth : MonoBehaviour
         deathTimeline.enabled = true;
         var mechCount = PlayerPrefs.GetInt("MechCount");
         PlayerPrefs.SetInt("MechCount", mechCount + 1);
+        Instantiate(explosion, transform.position, Quaternion.identity);
+        gameObject.SetActive(false);
     }
 }

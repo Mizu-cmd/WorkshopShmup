@@ -9,18 +9,20 @@ public class PlayerShoot : MonoBehaviour
     private Weapon _special;
     private bool _shootSecondary;
     private VisualEffect _casingEffect;
+    private Transform casingSpawn;
    
     private void Start()
     {
         _primary = GetComponentInChildren<PrimaryWeapon>();
         _secondary = GetComponentInChildren<SecondaryWeapon>();
         _casingEffect = GetComponentInChildren<VisualEffect>();
+        casingSpawn = GameObject.Find("SecondaryWeaponSpawn").transform;
     }
 
     public void Update() {
         if (_shootSecondary)
         {
-            _casingEffect.SetVector3("SpawnPos", transform.position);
+            _casingEffect.SetVector3("SpawnPos", casingSpawn.position);
             _secondary.Shoot();
         }
     }

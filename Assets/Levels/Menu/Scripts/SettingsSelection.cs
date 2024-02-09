@@ -1,35 +1,30 @@
+using System;
 using Cinemachine;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
 
 public class SettingsSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    private Vector3 startPos;
+    private Vector3 _startPos;
     private bool _hovered = false;
     [SerializeField] private CinemachineVirtualCamera cam;
-
+    
     private void Start()
     {
-        startPos = transform.position;
+        _startPos = transform.position;
     }
 
     private void Update()
     {
         if (_hovered)
         {
-            transform.position = Vector3.Lerp(transform.position, startPos + Vector3.left / 2, Time.deltaTime * 3f);
+            transform.position = Vector3.Lerp(transform.position, _startPos + Vector3.left / 2, Time.deltaTime * 3f);
             if (Input.GetMouseButtonDown(0))
             {
-                cam.Priority = 10;
-                SceneManager.LoadScene("Zoo");
+                Clicked();
             }
         }
-        else transform.position = Vector3.Lerp(transform.position, startPos, Time.deltaTime * 3f);
-
-
+        else transform.position = Vector3.Lerp(transform.position, _startPos, Time.deltaTime * 3f);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -40,5 +35,11 @@ public class SettingsSelection : MonoBehaviour, IPointerEnterHandler, IPointerEx
     public void OnPointerExit(PointerEventData eventData)
     {
         _hovered = false;
+    }
+
+
+    public void Clicked()
+    {
+        cam.Priority += 2;
     }
 }
