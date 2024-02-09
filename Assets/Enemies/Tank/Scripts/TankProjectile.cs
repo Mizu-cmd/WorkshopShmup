@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TankProjectile : MonoBehaviour
@@ -8,7 +9,9 @@ public class TankProjectile : MonoBehaviour
 
     private void Start()
     {
-        transform.LookAt(GameObject.FindGameObjectWithTag("Player").transform);
+        var player = GameObject.FindGameObjectWithTag("Player");
+        if (!player.IsDestroyed())
+            transform.LookAt(GameObject.FindGameObjectWithTag("Player").transform);
         Destroy(gameObject,3f);
     }
 

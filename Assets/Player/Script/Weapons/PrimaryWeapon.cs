@@ -57,7 +57,7 @@ public class PrimaryWeapon : Weapon
         if (madeImpact)
         {
             HandleImpact(hitPoint, _hit.normal);
-            if (_hit.transform.gameObject != null)
+            if (_hit.transform != null && _hit.transform.gameObject != null)
             {
                 Enemy enemy;
                 if (_hit.transform.gameObject.TryGetComponent(out enemy))
