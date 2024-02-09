@@ -10,6 +10,6 @@ public class LevelBounds : MonoBehaviour
         {
             LevelManager.Instance.EnemyCount--;
             Destroy(enemy.gameObject);
-        } else Destroy(other.transform.parent.gameObject);
+        } else Destroy(other.transform.parent.parent.gameObject);
     }
 }
